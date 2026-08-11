@@ -12,16 +12,18 @@ Bundle version `4e9dd6074ced64a1` · last verified 2026-08-10 · curated by [ski
 
 ## Install
 
-One skill:
+Installs with the [`skills`](https://www.npmjs.com/package/skills) CLI, which reads this repo's `skills/<slug>/SKILL.md` layout directly from GitHub.
 
-```bash
-npx skillfed install skill-federation/seo-skills/geo-technical
-```
-
-The whole bundle, with any `skills/`-convention consumer:
+The whole bundle:
 
 ```bash
 npx skills add skill-federation/seo-skills
+```
+
+One skill (repeat `--skill` for more):
+
+```bash
+npx skills add skill-federation/seo-skills --skill geo-technical
 ```
 
 ## The seven skills

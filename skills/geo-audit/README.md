@@ -2,10 +2,7 @@
 
 **A scored technical audit of whether a live domain is legible to AI-search crawlers, current to 2026: one stdlib Python script, about 30 seconds, five load-bearing checks (robots.txt bot access, pre-JS rendering, sitemap, JSON-LD, internal links) with llms.txt reported as informational only. Reach for it when a site needs a fast numeric verdict on AI-crawler visibility before content spend; it refuses to emit numbers when the script cannot run or the domain will not resolve.**
 
-An upgraded, era-verified derivative of [`vellum-ai/vellum-assistant/geo-audit`](https://github.com/vellum-ai/vellum-assistant) —
-4 defect fixes and 2 excisions, with its guidance checked against platform reality current to 2026 (the kind
-of dated facts a wild skill silently predates). Conditions are stated, every workflow step ends
-in a runnable check, and what changed from the original is recorded with reasons.
+An upgraded, era-verified, defect-fixed derivative of [`vellum-ai/vellum-assistant/geo-audit`](https://github.com/vellum-ai/vellum-assistant), checked against platform reality current to 2026 (the kind of dated facts a wild skill silently predates). Conditions are stated, and every workflow step ends in a runnable check.
 
 ## Install
 
@@ -28,9 +25,6 @@ npx skills add skill-federation/seo-skills --skill geo-audit
 
 ## Provenance & trust
 
-Derived from [`vellum-ai/vellum-assistant/geo-audit`](https://github.com/vellum-ai/vellum-assistant) · MIT · last
-verified 2026-08-10. Every source, the full list of changes, and attribution are
-in [SKILL.md](SKILL.md); every vendored file is pinned by sha256 in the bundle's
-[`bundle.json`](../../bundle.json).
+Derived from [`vellum-ai/vellum-assistant/geo-audit`](https://github.com/vellum-ai/vellum-assistant) · MIT · last verified 2026-08-10. Attribution is in [SKILL.md](SKILL.md)'s Attribution section; every vendored file is pinned by sha256 in the bundle's [`bundle.json`](../../bundle.json).
 
 Part of the [seo-skills bundle](../../README.md) · curated by [skillfed.io](https://skillfed.io)

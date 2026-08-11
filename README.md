@@ -1,14 +1,12 @@
 # seo-skills
 
-**Everything an AI agent needs to make a site legible to AI search — in one non-conflicting bundle, current to 2026.**
+**Everything an AI agent needs to plan, build, and prove out SEO and AI-search — in one non-conflicting bundle, current to 2026.**
 
-The community has published dozens of overlapping SEO and GEO skills. Their quality is uneven, and many still ship tactics that Google has since retired — FAQ rich results, HowTo schema, `llms.txt` treated as a ranking factor — so an agent that grabs the wrong one can quietly follow stale advice. Picking well means reading all of them.
+Most SEO skills tell an agent what's wrong with a site that already exists. The harder, more valuable moment comes earlier: **how do you build the thing right in the first place** — so it ranks and gets cited by ChatGPT, Perplexity, and Google AI Overviews — without following tactics the platforms quietly retired?
 
-We did that. We pulled every available SEO/GEO skill from the federation catalog, clustered them by the job they actually do, reviewed the cluster, and kept the single best skill in each role. Then we upgraded each one — verified against 2026 platform reality, stated its conditions, ended every workflow step in a runnable check, fixed defects, and carried its attribution — and de-conflicted the set so the seven compose into one toolchain instead of contradicting each other.
+This bundle now starts there. Two build-time planners lead, then seven skills take over once the site is live — nine in all, dividing the work by **role and lifecycle stage** rather than by topic, sharing one written-down 2026 baseline, and de-conflicted so they compose into a single toolchain instead of contradicting each other.
 
-The result is **7 skills that divide the work by role, share one written-down 2026 baseline, and don't step on each other.**
-
-Bundle version `4e9dd6074ced64a1` · last verified 2026-08-10 · curated by [skillfed.io](https://skillfed.io)
+Bundle version `3d5634ce2d5f812b` · 9 skills · last verified 2026-08-10 · curated by [skillfed.io](https://skillfed.io)
 
 ## Install
 
@@ -23,47 +21,45 @@ npx skills add skill-federation/seo-skills
 One skill (repeat `--skill` for more):
 
 ```bash
-npx skills add skill-federation/seo-skills --skill geo-technical
+npx skills add skill-federation/seo-skills --skill seo-plan
 ```
 
-## The seven skills
+## The nine skills
 
-Each divides the job by role, not by topic. Click through for the full document, its **Conditions** (when to use, when not, what breaks first), and its **Findings** and **Attribution**.
+Divided by where they belong in the lifecycle — plan, then audit, then strategize and implement. Click through for the full document, its **Conditions** (when to use, when not, what breaks first), and its provenance.
 
-| skill | role | reach for it when | source | license |
-|---|---|---|---|---|
-| **[geo-audit](skills/geo-audit/SKILL.md)** | Fast scored verdict | You need a numeric AI-crawler-visibility read in ~30s before spending on content — one stdlib Python script, five load-bearing checks. Escalates to geo-technical. | [vellum-ai/vellum-assistant](https://github.com/vellum-ai/vellum-assistant) | MIT |
-| **[geo-technical](skills/geo-technical/SKILL.md)** | Deep live-site audit | Pages rank nowhere or AI assistants never cite the site — grades 8 infrastructure categories out of 100, holding raw HTML against the rendered DOM. | [zubair-trabzada/geo-seo-claude](https://github.com/zubair-trabzada/geo-seo-claude) | MIT |
-| **[seo-validate](skills/seo-validate/SKILL.md)** | Repo pre-ship audit | The pages live in a codebase, not behind a URL — framework-aware, read-only, with severity and definitive-vs-heuristic confidence labels. | [softspark/ai-toolkit](https://github.com/softspark/ai-toolkit) | Apache-2.0 |
-| **[ai-bot-log-audit](skills/ai-bot-log-audit/SKILL.md)** | Server-log evidence | A citation-gap theory needs data — reads access logs to show what GPTBot, ClaudeBot, PerplexityBot and peers actually fetch, skip, or error on. | [guia-matthieu/clawfu-skills](https://github.com/guia-matthieu/clawfu-skills) | MIT |
-| **[ai-seo](skills/ai-seo/SKILL.md)** | Strategy layer | Planning how a site earns AI citations, before any edits — adjudicates tactics per engine and emits an evidence-tagged plan. Executes nothing; pair with an auditor. | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) | MIT |
-| **[seo](skills/seo/SKILL.md)** | Implementation reference | Building or reviewing markup — copy-paste JSON-LD, robots, canonical and hreflang blocks, plus scripted Lighthouse / PageSpeed / Search Console measurement. | [addyosmani/web-quality-skills](https://github.com/addyosmani/web-quality-skills) | MIT |
-| **[claude-seo](skills/claude-seo/SKILL.md)** | Full toolchain front door | You want orchestrated, client-grade reports and will install its runtime — `/seo` commands, a doctor preflight, parallel audits, hard quality gates. | [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo) | MIT |
+| skill | stage | reach for it when |
+|---|---|---|
+| **[seo-plan](skills/seo-plan/SKILL.md)** | Build (technical) | You're building or rebuilding a site and want the SEO foundation right from the start — architecture, rendering, HTML semantics, per-page schema, Core Web Vitals budgets, E-E-A-T and trust, content structure. Produces a written build plan; inspects nothing. |
+| **[geo-plan](skills/geo-plan/SKILL.md)** | Build (AI-search) | You're deciding what content and structure to create so AI search *cites* you — the 2026 GEO reality, per-engine behavior, what to build and what to skip. Plans; scores nothing. |
+| **[geo-technical](skills/geo-technical/SKILL.md)** | Audit | A live site ranks nowhere or AI assistants never cite it — the full 8-category infrastructure inspection, /100. |
+| **[geo-audit](skills/geo-audit/SKILL.md)** | Audit | You need a fast scored AI-crawler-legibility verdict in ~30 seconds before spending on content. |
+| **[seo-validate](skills/seo-validate/SKILL.md)** | Audit | The pages live in a repository, not behind a URL — a framework-aware, read-only, CI-gating check before anything ships. |
+| **[ai-bot-log-audit](skills/ai-bot-log-audit/SKILL.md)** | Evidence | A citation-gap theory needs server-log proof of what GPTBot, ClaudeBot, PerplexityBot and peers actually fetched. |
+| **[ai-seo](skills/ai-seo/SKILL.md)** | Strategy | A *specific live site* needs its tactics adjudicated per engine, against real evidence — pairs with an auditor. |
+| **[seo](skills/seo/SKILL.md)** | Implement | You're writing the markup — copy-paste JSON-LD, robots, canonical and hreflang, plus scripted Lighthouse / PageSpeed / Search Console measurement. |
+| **[claude-seo](skills/claude-seo/SKILL.md)** | Suite | You want orchestrated, client-grade deliverables and will install its runtime — `/seo` commands, a doctor preflight, parallel audits, hard quality gates. |
 
 ## How they fit together
 
-A typical live-site engagement moves down this path; stop wherever you have your answer.
+The lifecycle runs left to right; stop wherever you have your answer.
 
-1. **geo-audit** — 30-second scored gate. Is this site even legible to AI crawlers?
-2. **geo-technical** — when the gate fails or the number is low: the full 8-category diagnosis.
-3. **ai-seo** — the strategy layer that turns findings into a per-engine, evidence-tagged plan (it runs nothing, so pair it with one of the auditors above).
-4. **seo** — the implementation reference to actually ship the markup and measure it.
+1. **seo-plan** / **geo-plan** — before a URL exists: turn "I'm building X" into a concrete, 2026-current build plan (technical foundation, and what earns AI citations).
+2. **geo-audit → geo-technical** — once it's live: a 30-second scored gate, then the full inspection if the number is low.
+3. **ai-seo** — the strategy layer that adjudicates, per engine, which tactics *this* site should adopt (it runs nothing, so pair it with an auditor above).
+4. **seo** — the implementation reference to ship the markup and measure it.
 
-Two side doors:
+Side doors: **seo-validate** when the pages live in your repo and you want a pre-ship check; **ai-bot-log-audit** when you need server-log evidence instead of a theory; **claude-seo** when the deliverable is a client-grade report suite.
 
-- **seo-validate** when the pages live in your repo and you want a read-only, framework-aware check before anything ships (CI-friendly).
-- **ai-bot-log-audit** the moment you need server-log evidence instead of a theory about what the crawlers do.
-- **claude-seo** when the deliverable is a client-grade report suite and the toolchain setup is warranted.
+## What makes these different
 
-## What "upgraded" means
+Two of the nine (**seo-plan**, **geo-plan**) are original skills we authored; the other seven are upgraded derivatives of the best community skills. Every one, authored or derived, is:
 
-Every skill here is one wild skill made trustworthy — never a topic blend. Against its source, each was:
-
-- **Era-verified to 2026** — retired rich-result types and unproven conventions are scored out, not recommended.
+- **Era-verified to 2026** — retired rich-result types and unproven conventions are ruled out, not recommended.
 - **Conditions-stated** — when to use it, when not, and what breaks first.
-- **Verify-looped** — every workflow step ends in a runnable check.
-- **Defect-fixed** — bugs in the original mechanics corrected; the mechanics themselves retained.
-- **Attribution-carrying** — every change is recorded, with its reason, in the skill's own **Findings** and **Attribution** sections.
+- **Verify-looped** — every workflow step (or, for the planners, the plan it produces) ends in a runnable check.
+- **De-conflicted as a set** — the nine were reviewed together so they route to each other instead of overlapping.
+- **Provenance-carrying** — derived skills name their upstream source and record what changed; the two authored skills state that every fact they teach traces to a verified skill in this bundle, in our own words, with nothing invented.
 
 ## The shared 2026 baseline
 
@@ -76,12 +72,12 @@ Every skill states these consistently, and each document carries its own dated p
 
 ## Scope
 
-**Covered.** The SEO-for-AI-search job split by role: one strategy layer that plans but executes nothing; three auditors working different ground (a 30-second scored verdict, a deep live-site inspection, and a read-only repo check); a server-log evidence method; an implementation reference for sites you control; and a front door to a full orchestrated toolchain.
+**Covered.** The SEO-for-AI-search job across the lifecycle: two build-time planners (technical and AI-search) that plan but execute nothing; four auditors working different ground (a 30-second scored verdict, a deep live inspection, a read-only repo check, and server-log evidence); a per-engine strategy layer for existing sites; an implementation reference; and a front door to a full orchestrated toolchain.
 
-**Deliberately not covered.** Writing or rewriting the content itself — this bundle structures, audits, and plans; content production lives in a separate collection, precisely because the worst stale-tactic traps concentrate there. Keyword research, backlink analysis, and rank tracking exist only behind the toolchain's front door (`/seo backlinks`, `/seo cluster`, `/seo content-brief`, rank tracking via extensions) — and the tiers that reach a third-party vendor send your domains and keywords with the query, surfaced as an explicit egress decision rather than a silent default. There is no skill promising AI-specific Search Console analytics, because Google ships no such reporting; anything claiming otherwise would sell you a dashboard for data that does not exist. Two adjacent jobs are queued, not covered: forensic traffic-drop diagnosis and a site-migration workflow. Until they land, the auditors here report the current state, not the history.
+**Deliberately not covered.** Writing or rewriting the content itself — this bundle plans, builds toward, audits, and strategizes; content production lives in a separate collection, precisely because the worst stale-tactic traps concentrate there. Keyword research, backlink analysis, and rank tracking exist only behind the toolchain's front door, and the tiers that reach a third-party vendor send your domains and keywords with the query — surfaced as an explicit decision, not a silent default. There is no skill promising AI-specific Search Console analytics, because Google ships no such reporting. Two adjacent jobs are queued, not covered: forensic traffic-drop diagnosis and a full site-migration workflow — until they land, the members here plan the build and read the current state, not the history.
 
 ## Provenance and licensing
 
-Provenance is a feature of this bundle, not a footnote. Every skill names its sources in its frontmatter (`derived_from`) and its **Attribution** section, ships its upstream license in its own directory, and pins every vendored file by sha256. Zero-text provenance entries (`superseded`, `sibling`) record family relationships only — no text was taken from them.
+Provenance is a feature of this bundle, not a footnote. Derived skills name their source in frontmatter (`derived_from`) and their **Attribution** section and ship its upstream license in their own directory; the two authored skills carry `synthesized_from` — the verified bundle members whose facts they restate. Every vendored file is pinned by sha256 in [`bundle.json`](bundle.json).
 
-This bundle's documents are generated from a maintained source of truth and re-verified on a cadence; the `verified` date is the date each skill's claims were last checked against its sources. A stamp dates a fact — it does not certify it.
+This bundle's documents are generated from a maintained source of truth and re-verified on a cadence; the `verified` date is when each skill's claims were last checked against its sources. A stamp dates a fact — it does not certify it.

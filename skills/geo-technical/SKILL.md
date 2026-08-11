@@ -733,15 +733,6 @@ This audit applied the era facts pinned in the auditing skill's Era section (ski
 
 ---
 
-## Findings
-
-Recorded from our editorial review of the base document (2026-08-10):
-
-- **Defects fixed:** one, applied at the bundle review (Stage 2.5, 2026-08-10): the base's 1.2 nuance hedged that blocking Google-Extended could cost AI Overviews presence — an unverified vendor-behavior claim no input confirms. It now states the effect as unverified, with blocking Googlebot named as what verifiably removes AI Overviews presence. Otherwise none in the retained text: the base was current on its own dated facts at review time — its Core Web Vitals table already carries the 2026 thresholds, and its agent-readiness category was already explicitly non-scoring. Two instructions our review judged stale were excised rather than fixed (below).
-- **Security review:** every fenced Verify command performs read-only HTTP fetches against the domain under audit — none contacts a third-party endpoint — and the only local write is the generated report. Retained base guidance does involve third parties when followed: the `site:` operator estimate in 2.5 queries a search engine, and 4.4 configures Bing Webmaster Tools. The AI-crawler user-agent comparison in Category 1's Verify block sends a bot user-agent string to the audited site as a diagnostic — run it only against sites you are authorized to audit.
-- **Excised (2):** the 4.4 instruction to configure URL parameters in Google Search Console (the tool it named is retired and the step cannot be executed; the Bing half is kept) and the Rendertron entry in Category 7's SSR-solutions table (archived upstream; Prerender.io remains). Beyond these, the base carries no retired-schema recommendations, no llms.txt scoring, and no promotional insertions; the guards in ## Era exist to keep those category-wide failure modes out of audit reports, not to correct ones that were present here.
-- **Grafts:** none. This is a single-source derivative.
-
 ## Attribution
 
 - Base: `zubair-trabzada/geo-seo-claude/geo-technical` — MIT License. This document is a derivative work: the audit structure, category rubrics, scoring tables, restraint rules, and report format originate there. The Conditions and Era sections, the inline Verify blocks, and the report template's Era Notes are additions made for the SkillFed domesticated collection.

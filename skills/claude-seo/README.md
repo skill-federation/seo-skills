@@ -2,10 +2,7 @@
 
 **Front door for a bundled SEO toolchain: /seo commands route bundled Python through the claude-seo launcher, with a doctor preflight and parallel full audits whose conditional specialists spawn only when site signals warrant them. Use it when an agent must produce client-grade SEO reports under 2026 rules — FAQ rich results retired, HowTo schema dead, llms.txt unproven — behind hard quality gates and with zero promotional content in deliverables.**
 
-An upgraded, era-verified derivative of [`AgriciDaniel/claude-seo/seo`](https://github.com/AgriciDaniel/claude-seo) —
-3 defect fixes and 2 excisions, with its guidance checked against platform reality current to 2026 (the kind
-of dated facts a wild skill silently predates). Conditions are stated, every workflow step ends
-in a runnable check, and what changed from the original is recorded with reasons.
+An upgraded, era-verified, defect-fixed derivative of [`AgriciDaniel/claude-seo/seo`](https://github.com/AgriciDaniel/claude-seo), checked against platform reality current to 2026 (the kind of dated facts a wild skill silently predates). Conditions are stated, and every workflow step ends in a runnable check.
 
 ## Install
 
@@ -29,9 +26,6 @@ npx skills add skill-federation/seo-skills --skill claude-seo
 
 ## Provenance & trust
 
-Derived from [`AgriciDaniel/claude-seo/seo`](https://github.com/AgriciDaniel/claude-seo) · MIT · last
-verified 2026-08-10. Every source, the full list of changes, and attribution are
-in [SKILL.md](SKILL.md); every vendored file is pinned by sha256 in the bundle's
-[`bundle.json`](../../bundle.json).
+Derived from [`AgriciDaniel/claude-seo/seo`](https://github.com/AgriciDaniel/claude-seo) · MIT · last verified 2026-08-10. Attribution is in [SKILL.md](SKILL.md)'s Attribution section; every vendored file is pinned by sha256 in the bundle's [`bundle.json`](../../bundle.json).
 
 Part of the [seo-skills bundle](../../README.md) · curated by [skillfed.io](https://skillfed.io)

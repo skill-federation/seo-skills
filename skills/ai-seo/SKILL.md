@@ -36,6 +36,7 @@ Domesticated derivative of the coreyhaines31/marketingskills `ai-seo` skill: the
 ### When NOT to use
 
 - **As evidence about a live site's current state.** This is the strategy layer: it asks questions and produces a plan; it runs nothing. It never fetches a page, reads a robots.txt, renders JavaScript, or scores anything. Any claim about what a site *currently* does must come from a paired executing audit skill — one that declares Bash/WebFetch-class tools and actually inspects the site — never from this document. In this bundle that executing role is filled by geo-technical (the full eight-category live inspection), geo-audit (the fast scored ~30-second check), or claude-seo (the suite audit behind its own runtime). A plan produced here that states site facts nobody fetched is the exact confident-report failure this collection exists to prevent.
+- For build-time or greenfield planning before a site exists to gather evidence about — use the plan skills: seo-plan for the traditional-plus-technical SEO build and geo-plan for the AI-search/GEO build. Those are the general build-time framework; this skill adjudicates tactics against a *specific* site's evidence and pairs with an executing audit, so it has nothing to inspect until there is a site.
 - For traditional technical and on-page SEO audits (crawlability, indexation, Core Web Vitals) — different job, different tooling.
 - For implementing structured data. This document says which schema types matter for AI extraction and why; writing the JSON-LD belongs to a schema-focused skill or your build pipeline.
 
@@ -612,29 +613,6 @@ These names are the upstream marketingskills suite's identifiers — they are pa
 - **competitors**: For building comparison pages that get cited
 - **programmatic-seo**: For building SEO pages at scale
 - **copywriting**: For writing content that's both human-readable and AI-extractable
-
-## Findings
-
-**Defects fixed**
-- The base reads like an audit but it asks questions and produces a plan; it runs nothing — and it never said so. Conditions now state the boundary as a hard condition (never use this document as evidence about a live site's current state), require pairing with an executing audit skill, and every Verify step in this document checks the produced artifacts (`ai-seo-plan.md`, `ai-seo-monitoring.md`, and post-implementation the shipped files) rather than pretending to check the site.
-- Dead link removed: the base's Tool Integrations pointed at a registry path that resolves only inside the upstream repository.
-- The vendored `references/platform-ranking-factors.md` predates the rich-results corrections and still sells FAQPage/HowTo schema as a Google AI Overviews lever; dated caveats now sit at both body link points to that file (the hash-pinned file itself is untouched). Independent-review finding, fixed in revision.
-
-**Excised**
-- The base's assertion that non-Google engines parse `llms.txt` when present — an unverified vendor-behavior claim, replaced with the dated editorial finding (2026-07-30: no vendor confirmation) and a downgraded, clearly-speculative recommendation.
-- The base's unhedged claim that blocking Google-Extended removes you from Gemini and AI Overviews citation — same unverified-vendor-behavior class as the llms.txt claim, now hedged explicitly in the bot list and What NOT to Do. Independent-review finding, fixed in revision.
-- The registry link above.
-
-**Security review**
-- No executable surface in the base or this derivative: no scripts shipped, no tools declared, no instructed calls to third-party services. External references are documentation URLs only. All Verify commands run against the operator's own artifacts or (post-implementation) the operator's own site.
-
-**Grafts**
-- None. The superseded fork contributed zero text (its body is a subset of an older cut of the keeper).
-
-**Era corrections applied**
-- Version stamp and fork-gap warning (2.2.0 vs the frozen 1.1.0 fork) written into Era — the wild listings carry no such warning.
-- FAQ/HowTo rich-results retirement dates and the `llms.txt` confirmation status added where the base's schema and machine-readable-file advice needed dating.
-- Provenance note: the one-line resolution "never sold to a client as a Google lever" is an addition sourced from the batch editorial (2026-07-30), not keeper text — see the delta ledger.
 
 ## Attribution
 

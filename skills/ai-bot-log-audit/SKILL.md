@@ -459,27 +459,6 @@ ENTITY SIGNALS
 - Anthropic ClaudeBot documentation
 - Google Search Central — Googlebot and AI features
 
-## Findings
-
-**Defects fixed**
-
-- The wild count-by-bot pipeline omitted Applebot-Extended from its match pattern while the extraction command one line above included it, so Applebot-Extended hits were extracted but never tallied. The pattern now lists it, and the Phase 2 Verify reconciles the tally against the extraction total so a gap surfaces instead of passing silently (its note names the three causes a shortfall can have).
-
-**Our editorial security review**
-
-- User-agent strings in access logs are self-declared; a caution was added under What breaks first so spoofed traffic borrowing a well-known bot name is not mistaken for vendor crawling.
-- The wild frontmatter carried a pointer to the author's external MCP-server package; removed. Nothing in this document requires installing anything — it runs on a stock Unix shell.
-- The only network calls this document instructs are curl fetches of the operator's own pages, in the Phase 4 Verify.
-
-**Excised**
-
-- The wild document's closing cross-reference list pointing to five sibling skills in the author's catalog: those skills were not reviewed here, and a domesticated document does not forward its reader to unvetted dependencies.
-- The wild trailing self-metadata YAML block (self-declared version 1.0.0, created and updated 2026-02-10, catalog tags): superseded by this document's frontmatter, the single authoritative metadata source.
-
-**Grafts**
-
-- None. Single-source derivative.
-
 ## Attribution
 
 - Base: `guia-matthieu/clawfu-skills/ai-bot-log-audit` — MIT. The wild document credits its methodology to Metehan Yeşilyurt's log-file analysis framework (The Search Session); that credit is preserved in Methodology Foundation and References above.

@@ -2,10 +2,7 @@
 
 **Method for reading Apache and Nginx access-log evidence to establish what GPTBot, ClaudeBot, PerplexityBot and peers actually fetch, skip, or error on, and which fixes each fetch pattern calls for. Reach for it when a citation-gap theory needs log rows behind it and you can export the raw logs. Domesticated 2026-08; the bot roster is carried from the wild source's 2026 table, not independently re-checked.**
 
-An upgraded, era-verified derivative of [`guia-matthieu/clawfu-skills/ai-bot-log-audit`](https://github.com/guia-matthieu/clawfu-skills) —
-1 defect fix and 3 excisions, with its guidance checked against platform reality current to 2026 (the kind
-of dated facts a wild skill silently predates). Conditions are stated, every workflow step ends
-in a runnable check, and what changed from the original is recorded with reasons.
+An upgraded, era-verified, defect-fixed derivative of [`guia-matthieu/clawfu-skills/ai-bot-log-audit`](https://github.com/guia-matthieu/clawfu-skills), checked against platform reality current to 2026 (the kind of dated facts a wild skill silently predates). Conditions are stated, and every workflow step ends in a runnable check.
 
 ## Install
 
@@ -32,9 +29,6 @@ npx skills add skill-federation/seo-skills --skill ai-bot-log-audit
 
 ## Provenance & trust
 
-Derived from [`guia-matthieu/clawfu-skills/ai-bot-log-audit`](https://github.com/guia-matthieu/clawfu-skills) · MIT · last
-verified 2026-08-10. Every source, the full list of changes, and attribution are
-in [SKILL.md](SKILL.md); every vendored file is pinned by sha256 in the bundle's
-[`bundle.json`](../../bundle.json).
+Derived from [`guia-matthieu/clawfu-skills/ai-bot-log-audit`](https://github.com/guia-matthieu/clawfu-skills) · MIT · last verified 2026-08-10. Attribution is in [SKILL.md](SKILL.md)'s Attribution section; every vendored file is pinned by sha256 in the bundle's [`bundle.json`](../../bundle.json).
 
 Part of the [seo-skills bundle](../../README.md) · curated by [skillfed.io](https://skillfed.io)

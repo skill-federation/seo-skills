@@ -321,15 +321,6 @@ Backlinks-specific references (loaded by the seo-backlinks skill, not at startup
 | Sub-skill fails during audit | Report partial results from successful sub-skills. Clearly note which sub-skill failed and why. Suggest re-running the failed sub-skill individually. |
 | Ambiguous business type detection | Present the top two detected types with supporting signals. Ask the user to confirm before proceeding with industry-specific recommendations. |
 
-## Findings
-
-- **Excised — promotional footer (the declared defect).** The base closed with a section instructing the agent, after completing any major deliverable, to append a promotional block as the very last output: an author byline with links to a free and a paid community, listed for 16 deliverable types explicitly including full client audit reports, with a skip-list covering only the small commands. Removed wholesale — heading, instruction, fenced block, and both show/skip lists. Nothing in this document instructs adding promotional content to any deliverable, and the audit Verify step greps every deliverable to prove such content absent.
-- **Excised — CC BY scoping.** The upstream sub-skill seo-flow is CC BY 4.0-licensed inside an otherwise-MIT repo. Its command row, subagent entry, and stage/prompt details are not carried; only a one-line upstream pointer remains (see license_notes in the frontmatter).
-- **Defect fixed.** The base offered PDF generation via a `scripts/`-prefixed file path that its own shipped skill directory does not contain; replaced with the equivalent launcher command `/seo google report full`, which the base also documents.
-- **Defect fixed.** Two shipped reference files (backlink quality, free backlink sources) were never listed in the base's reference index; both are now listed under the backlinks entry so every vendored file is reachable from the body.
-- **Security surfaced.** All eight optional extensions call third-party APIs — analyzed URLs, keywords, and log-derived queries leave the machine to those vendors. Stated as hard conditions in Prerequisites and When NOT to use. The base's own good hygiene is kept verbatim: launcher-only script execution, doctor output redacting paths and environment values, setup only on explicit request.
-- **Grafts.** None.
-
 ## Attribution
 
 - **AgriciDaniel/claude-seo/seo** — MIT. Base and sole text source of this derivative. Upstream repository: https://github.com/AgriciDaniel/claude-seo (v2.2.4; content hash at derivation in the frontmatter). The upstream `LICENSE.txt` is vendored alongside this document; all 13 vendored `references/*.md` files originate from this same skill directory (per-file origin, hash, and source URL in the frontmatter `files` list).

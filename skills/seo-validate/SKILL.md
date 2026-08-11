@@ -625,40 +625,6 @@ Vendored with this skill (clean at the 2026-08-10 era review):
 
 Excluded from the upstream set as era-stale (see ## Findings for the specifics): reference/schema-types.md, reference/geo-aeo-patterns.md, reference/geo-guidelines.md, reference/content-citability.md, reference/ai-pipeline.md. Their still-valid content — the structured-data required-property matrix — is folded into Category 3 above.
 
-## Findings
-
-### Defects fixed
-
-- **Category 3 FAQPage row** demoted WARN → INFO and re-dated: existing markup is validated structurally and reported as informational, because Google retired FAQ rich results for every site on 2026-05-07.
-- **Category 6 chunking row** demoted WARN → INFO and stripped of its restructure imperative; the entire GEO category is demoted to hypothesis tier because its retrieval-window rationale is single-source and chunking content for AI is the exact practice Google names as a mistake.
-- **Category 6 add-FAQPage row** replaced with an informational existing-FAQPage/HowTo flag. Never recommend adding FAQPage or HowTo for Google benefit; HowTo has been deprecated since September 2023.
-- **Category 10** AI-signal rationale (Gecko, Blyskall figures, Query Fan Out) conditioned to hypothesis tier; the structural link checks remain load-bearing.
-- **Vendored scanner's llms.txt finding** era-conditioned: llms.txt sits at roughly 0.015% adoption with no vendor confirmation, so the finding is informational-only, never a recommended fix.
-- **Summary, Rules, and Usage scopes** re-labeled so the GEO output cannot be read as a checklist; a new rule bullet forbids recommending retired rich-result schema.
-- **Era-clean AI-crawler robots.txt directives recovered** from the excluded AEO reference and folded into Category 8: the User-agent table plus the caution that blocking `Googlebot` blocks AI Overviews while `Google-Extended` is the Gemini-training opt-out (whether it also affects AI Overviews inclusion is unverified — Stage 2.5 bundle adjudication, 2026-08-10), with two new intent-check rows.
-- **Remaining clean schema-type coverage folded** into Category 3 (Event, WebSite/SearchAction, Recipe, VideoObject, case-sensitive `@type`, no fabricated ratings), and the native `<details>`/`<summary>` DOM-visibility exemption restored in the Category 6 hidden-content row.
-- **Two dead anchor fragments** in the sample report corrected to real headings (`#above-the-fold-heuristics`, `#prerendering-strategies-for-spas`) — a pre-existing base defect; the base pointed at headings that do not exist in its own reference files.
-
-### Security review (editorial)
-
-- `scripts/seo-scanner.py` reviewed line by line: Python stdlib only, filesystem reads only, no network egress, no file writes, no subprocess use. Exit codes 0/1/2 as documented in the Step 2 Verify block. The script's behavior is consistent with the document's read-only contract.
-
-### Excised
-
-Five upstream reference files were excluded from the vendored set because each teaches an era-stale practice; vendoring them unmodified would reimport the defects this derivative fixes:
-
-- `reference/schema-types.md` — states "Triggers rich FAQ results in SERP." and lists HowTo among rich-result-eligible types. Its still-valid type coverage (required-property matrix, Event/WebSite/Recipe/VideoObject notes, common-mistake items) is folded into Category 3; the full JSON-LD templates are not carried.
-- `reference/geo-aeo-patterns.md` — calls FAQPage the "highest-precision signal", ships HowTo pattern checks, and its checklist requires llms.txt at the domain root. Its era-clean robots.txt AI-crawler directives are folded into Category 8.
-- `reference/geo-guidelines.md` — teaches "The 375-word rule" as a checklist item and instructs pairing procedures with HowTo schema. Its era-clean native `<details>`/`<summary>` exemption is folded into the Category 6 hidden-content row.
-- `reference/content-citability.md` — its chunk-architecture section instructs keeping every H2 under ~375 words and splitting with an H3, i.e. chunking-for-AI as a rule.
-- `reference/ai-pipeline.md` — routes "how to X" queries to HowTo and persona queries to FAQPage as live format signals, and teaches chunk-position targeting; single uncorroborated agency source throughout.
-
-Also excised: the original harness frontmatter and `$ARGUMENTS` macro (not portable into this collection's frontmatter model; the CLI flags are documented verbatim under ## Usage).
-
-### Grafts
-
-None.
-
 ## Attribution
 
 Derived from **softspark/ai-toolkit/seo-validate** (repository: https://github.com/softspark/ai-toolkit, skill directory `app/skills/seo-validate`), Copyright 2024-2026 Lukasz Krzemien, licensed under the Apache License, Version 2.0. This derivative is itself distributed under the Apache License, Version 2.0.

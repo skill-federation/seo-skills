@@ -177,13 +177,6 @@ This reproduces the script's own `(missing × impact / effort)` ranking, strikes
 - [ ] One paragraph named which fix to ship first
 - [ ] If the HTML report was generated, the user was told where it went (and `--no-html` was used for client deliverables)
 
-## Findings
-
-- **Defects fixed**: llms.txt demoted from a 15-point scored check and top-fix candidate to an informational presence note — zero weight, never a fix — because no major AI vendor has confirmed reading it and adoption sits around 0.015%; the presented score becomes load-bearing /85. Check descriptions corrected to the vendored code's actual behavior: the rendering check measures pre-JS word count, H1, title, meta description, and og:title (the base claimed brand-name and CTA detection), and the schema check validates WebSite type presence only, never SearchAction. The unreachable-domain refusal is now operational: the script emits a hollow ~18/100 scorecard for dead domains, so the status-0 finding is named as the mandatory refusal trigger.
-- **Security notes (our editorial review, not a scan)**: the script makes about a dozen outbound GETs to the target plus up to three llms.txt-linked URLs, under a user agent identifying the upstream vendor; by default it writes an HTML report to the system temp directory and auto-opens a browser (`--no-html` / `--no-open` for CI); that HTML embeds a promotional vendor handoff — noted for client deliverables.
-- **Excised**: the base's value framing of llms.txt and its sample-output block whose #1 ranked fix was creating an llms.txt file (replaced by the corrected sample in Step 3).
-- **Grafts**: none.
-
 ## Attribution
 
 - Base: `vellum-ai/vellum-assistant/geo-audit` — MIT. This document is a SkillFed derivative of that skill's SKILL.md; the audit mechanics, check catalog, scoring bands, and refusal discipline originate there.

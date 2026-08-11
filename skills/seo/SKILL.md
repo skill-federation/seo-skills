@@ -672,15 +672,6 @@ curl -s https://example.com/faq | grep -c 'FAQPage'   # AI parsing only
 
 ---
 
-## Findings
-
-Our editorial review (batch 940, 2026-08-10) — a review, not a scan.
-
-- **Fixed**: the fork dropped the base's llms.txt caution — kept here; every grafted paragraph checked, none assigns `llms.txt` weight. Dead sibling-skill links removed. Scripts' usage messages print an extra `seo/` path segment (upstream layout).
-- **Security**: `pagespeed.sh` sends the URL + `PAGESPEED_API_KEY` (query param) to `www.googleapis.com`; `search-console-export.mjs` sends a `GSC_ACCESS_TOKEN` bearer token to `searchconsole.googleapis.com`; `lighthouse.sh` fetches the target via headless Chrome. Env vars only; audit only authorized sites.
-- **Excised**: an unsourced FAQPage citation-rate superlative (misleading after 2026-05-07); unsourced market-shift statistics; illustrative AEO example blocks and checklist, condensed to prose. At bundle review (Stage 2.5, finding 9): the per-platform preference profiles and monthly query-testing cadence — ai-seo's declared monitoring territory; the GA4 source configuration stays, with a pointer to that strategy layer.
-- **Grafts** (warpdotdev/oz-skills/seo-aeo-audit, MIT): audit workflow; the three scripts; the AEO half + `references/json-ld-templates.md`.
-
 ## Attribution
 
 - **Base**: `addyosmani/web-quality-skills/seo` (MIT) — every section not listed under Graft, including the llms.txt caution.

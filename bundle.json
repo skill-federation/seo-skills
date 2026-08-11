@@ -1,17 +1,176 @@
 {
   "name": "seo-skills",
-  "bundle_version": "4e9dd6074ced64a1",
+  "bundle_version": "3d5634ce2d5f812b",
   "generated_from": "skillfed domesticated-skills collection",
   "members": [
+    {
+      "slug": "seo-plan",
+      "skill_md": "skills/seo-plan/SKILL.md",
+      "sha256": "e53f5262b3614139aca028f2999c1ae29121e5c73c8c1914bc4895b510974109",
+      "published_sha256": "7a8fe056c2dff8f6630b5f87a3c4e72622a6bf669433b14e79fc465ff1aa9ef5",
+      "license": "MIT",
+      "description": "Build-time SEO planning for 2026: turns a new site or product into a written build plan — architecture, server-rendering, semantics, per-page schema, Core Web Vitals budgets, E-E-A-T, content structure — before any live URL exists. Use it to structure a site for search from the start, not audit a running one. Encodes the 2026 baseline (FAQ retired, HowTo dead, INP not FID, crawlers that skip JavaScript) and verifies the plan it writes. Pair with geo-plan for AI-search citation.",
+      "targeted_version": null,
+      "last_verified_at": "2026-08-10",
+      "treatment": "synthesized",
+      "derived_from": [],
+      "synthesized_from": [
+        {
+          "slug": "seo",
+          "content_hash_at_synthesis": "58640da8597b6fd8ee88ed0f15a8cb0d8eca09a938e3a8134e0a9a67446aa5f3",
+          "references_drawn": [
+            {
+              "path": "references/json-ld-templates.md",
+              "sha256": "cf4e5e63156119a5a47db62209f554802bf427cf8027dbb43e8b032ddcfe3a5c"
+            }
+          ]
+        },
+        {
+          "slug": "geo-technical",
+          "content_hash_at_synthesis": "593c7843b77896a475690c2a7a35681b3e60b4562bdcaf74e2756034eb5b9d8f"
+        },
+        {
+          "slug": "seo-validate",
+          "content_hash_at_synthesis": "4b9c5ae865ae1788de7b444c9e7e4f3ce62f8d582d5469655b2b8be94a3a924f",
+          "references_drawn": [
+            {
+              "path": "reference/spa-ssg-patterns.md",
+              "sha256": "8271f0c3fcb9e52eb368f28b74e9975ba28d1f0fb8d9a72881eb62ad85962eb6"
+            },
+            {
+              "path": "reference/core-web-vitals.md",
+              "sha256": "3a5db2c3519899098ba85f44f67de0371e57f8d46300cec0dd92203ab36bdcf1"
+            },
+            {
+              "path": "reference/w3c-guidelines.md",
+              "sha256": "ec5dd3b7356bd80129fbb62592914b2d448c0b84549b7c995388ee85ce1158cb"
+            }
+          ]
+        },
+        {
+          "slug": "claude-seo",
+          "content_hash_at_synthesis": "6c6aa917b552011339589f43df9c082ddde2ded75e3a17e3f5492ab96590704d",
+          "references_drawn": [
+            {
+              "path": "references/eeat-framework.md",
+              "sha256": "6550ca35ca94180686c32e907baf3bb544832cc3c612a7df0b0afef0d0e279be"
+            },
+            {
+              "path": "references/schema-types.md",
+              "sha256": "b829bb44b17bc32032a1036c925ecd0a172a6f1ea23c6c00edd1893fbc2b19cf"
+            },
+            {
+              "path": "references/cwv-thresholds.md",
+              "sha256": "0144772e781f532eb1263c2bacd15940f429de704ac123f60c6714bcac4a9816"
+            },
+            {
+              "path": "references/quality-gates.md",
+              "sha256": "5dec0bf50a443546cf4f222259cdcdfe2a891fcf97dd2278df59264c7738d36f"
+            }
+          ]
+        },
+        {
+          "slug": "ai-seo",
+          "content_hash_at_synthesis": "72dad603e35b593139f298cff98d6a163a8dea8b378eb317902e337f316586fb"
+        }
+      ],
+      "era_pins": [
+        "Google retired FAQ rich results for every site on 2026-05-07",
+        "HowTo rich results have been deprecated since September 2023",
+        "AI crawlers do not execute JavaScript",
+        "Google crawls ALL sites exclusively with mobile Googlebot",
+        "INP replaced FID as the interactivity metric on March 12, 2024",
+        "llms.txt is a proposed convention at roughly 0.015% adoption with no vendor confirmation",
+        "E-E-A-T evaluation follows the September 11, 2025 Quality Rater Guidelines update"
+      ],
+      "files": []
+    },
+    {
+      "slug": "geo-plan",
+      "skill_md": "skills/geo-plan/SKILL.md",
+      "sha256": "b5923df708852feb61e925d15b66ca0d667a8fc39cf33e42060025087a6659a5",
+      "published_sha256": "4b31c98608ae1c6c92611dcf519a5c638fe30361b7526cf0083a89f50be8b222",
+      "license": "MIT",
+      "description": "Build-time GEO and answer-engine planning, current to 2026: decide what content and site structure to create so AI search (ChatGPT, Perplexity, Google AI Overviews, Claude) cites you — applied before a live site exists to audit. Emits a build plan naming the engine each item targets and a skip list for what is dead or unproven. It plans only: it fetches, renders, scores and audits nothing.",
+      "targeted_version": "2026 build-time GEO best practices (synthesized 2026-08-10)",
+      "last_verified_at": "2026-08-10",
+      "treatment": "synthesized",
+      "derived_from": [],
+      "synthesized_from": [
+        {
+          "slug": "ai-seo",
+          "content_hash_at_synthesis": "72dad603e35b593139f298cff98d6a163a8dea8b378eb317902e337f316586fb",
+          "references_drawn": [
+            {
+              "path": "references/content-patterns.md",
+              "sha256": "8adcfcc020a3529eda71f783e4893d3e39e8b0f503fd2fa126e8b75a80963824"
+            },
+            {
+              "path": "references/platform-ranking-factors.md",
+              "sha256": "ca3fb8c09fec3445abe611bab2cd1b5f20751c5d51a3a5c63ecd2b85cd458ee8"
+            },
+            {
+              "path": "references/citations-vs-recommendations.md",
+              "sha256": "88016418b43b7e798dd950eb1240f76dec08c3408038f9a5d83005aff5a4daa3"
+            },
+            {
+              "path": "references/content-types.md",
+              "sha256": "9ad0a871f866efa307fc0d6fe2bd19d443a2276cb396afdd5b4d81fe9b4167e3"
+            },
+            {
+              "path": "references/okf.md",
+              "sha256": "4abcab5b8ee90b63c5d09c98387a8ec3cdb8f5df33e75d3b4b91eb817283bfd8"
+            }
+          ]
+        },
+        {
+          "slug": "geo-technical",
+          "content_hash_at_synthesis": "593c7843b77896a475690c2a7a35681b3e60b4562bdcaf74e2756034eb5b9d8f"
+        },
+        {
+          "slug": "ai-bot-log-audit",
+          "content_hash_at_synthesis": "910261c827a36fc2f2c7ae72e2eeb2b188061baa10898af2cf25b54d048a1765"
+        },
+        {
+          "slug": "geo-audit",
+          "content_hash_at_synthesis": "c139a4456503b182c0c0834ff202a4f39f9f5e8612fa8283c214fd670debefe9"
+        },
+        {
+          "slug": "seo",
+          "content_hash_at_synthesis": "58640da8597b6fd8ee88ed0f15a8cb0d8eca09a938e3a8134e0a9a67446aa5f3",
+          "references_drawn": [
+            {
+              "path": "references/json-ld-templates.md",
+              "sha256": "cf4e5e63156119a5a47db62209f554802bf427cf8027dbb43e8b032ddcfe3a5c"
+            }
+          ]
+        }
+      ],
+      "era_pins": [
+        "AI crawlers do not execute JavaScript",
+        "Google's generative AI features on Search are rooted in its core Search ranking and quality systems — nothing has to be added to a page for them",
+        "Google retired FAQ rich results for every site on 2026-05-07",
+        "HowTo has been deprecated since Sept 2023",
+        "llms.txt is a proposed convention at roughly 0.015% adoption with no vendor confirmation",
+        "the Princeton GEO study (KDD 2024) ranks citing sources at the top of its nine-method list at roughly +40% visibility, while keyword stuffing at the bottom actively costs roughly 10%",
+        "Place key claims, definitions, and statistics at the START and END of pages/sections",
+        "producing an AI-targeted variant of your content falls under Google's scaled-content spam policy",
+        "INP replaced FID in March 2024",
+        "Google's v0.1 markdown spec for representing site content as an agent-readable bundle",
+        "Claude uses Brave Search as its search backend when web search is enabled — not Google, not Bing"
+      ],
+      "files": []
+    },
     {
       "slug": "geo-technical",
       "skill_md": "skills/geo-technical/SKILL.md",
       "sha256": "593c7843b77896a475690c2a7a35681b3e60b4562bdcaf74e2756034eb5b9d8f",
-      "published_sha256": "92b32c59786cef20aa921d8649ad7093d9e650a760a09aa3c4b8098986898c9e",
+      "published_sha256": "0d75164b0e6254d48d9ff1c3aa761a2106cbf43a18c0ac274ccd6a6a1aceb952",
       "license": "MIT",
       "description": "Score a live site's readiness to be read by machines: fetch raw HTML, hold it against the browser render, and grade eight infrastructure categories out of 100 before any content or GEO work starts. Use when pages rank nowhere, AI assistants never cite the site, or a JavaScript framework may be hiding the copy from crawlers. Era-stamped for 2026 — retired rich-result types and unproven conventions stay out of the score.",
       "targeted_version": "web and AI-crawler behavior as of 2026-08",
       "last_verified_at": "2026-08-10",
+      "treatment": "derivative",
       "derived_from": [
         {
           "id": "zubair-trabzada/geo-seo-claude/geo-technical",
@@ -20,6 +179,7 @@
           "content_hash_at_derivation": "602355e470fff83367651c25068c5b51515f44cc7cf19c8aa3eaf5a9accb720b"
         }
       ],
+      "synthesized_from": [],
       "era_pins": [
         "AI crawlers do not execute JavaScript",
         "Google retired FAQ rich results for every site on 2026-05-07",
@@ -33,12 +193,13 @@
     {
       "slug": "ai-seo",
       "skill_md": "skills/ai-seo/SKILL.md",
-      "sha256": "72dad603e35b593139f298cff98d6a163a8dea8b378eb317902e337f316586fb",
-      "published_sha256": "4d259216145877e547bf67cac2e53ada954db8e4d4cf5527a706853a37e55190",
+      "sha256": "c565f29a36f2417b6a8cad8238bba464a386a931cf7efca9e58a3e9a184cd847",
+      "published_sha256": "a274c4245cbd26ed2b660380202a10be24da33185ffaefd9d8fdb35e1becc720",
       "license": "MIT",
       "description": "The GEO/AEO strategy layer for agents, current to Google's 2026 guidance split: answer features ride core ranking while ChatGPT, Claude, and Perplexity reward extractable structure. Load it when planning how a site earns AI citations, before any page edits. It interviews, adjudicates tactics per engine, and emits an evidence-tagged plan; it executes nothing, so pair it with an audit skill that actually fetches the site.",
       "targeted_version": "2.2.0",
       "last_verified_at": "2026-08-10",
+      "treatment": "derivative",
       "derived_from": [
         {
           "id": "coreyhaines31/marketingskills/ai-seo",
@@ -53,6 +214,7 @@
           "content_hash_at_derivation": "7ef9eac488baafde07c816f6c24c1b250995bef730882cc05e4dfe32978d93eb"
         }
       ],
+      "synthesized_from": [],
       "era_pins": [
         "targets the 2.2.0 line of coreyhaines31/marketingskills/ai-seo; the same-name fork b1rdmania/ghostclaw/ai-seo is frozen at 1.1.0 and is missing the Google-stance section and the query fan-out material",
         "Google's generative AI features on Search are rooted in its core Search ranking and quality systems — nothing has to be added to a page for them",
@@ -86,11 +248,12 @@
       "slug": "seo-validate",
       "skill_md": "skills/seo-validate/SKILL.md",
       "sha256": "4b9c5ae865ae1788de7b444c9e7e4f3ce62f8d582d5469655b2b8be94a3a924f",
-      "published_sha256": "98586249f7d6ebd824bfa2597b842711c2f75574c58ee14f7f23e66f6e7a6ceb",
+      "published_sha256": "e04d24c6a62f655085986d1c1f0dba1c7bdd4e4c41dd1c799b1adcb24e8caf52",
       "license": "Apache-2.0",
       "description": "Repo-reading pre-ship SEO audit for source code: detects the framework first, then applies framework-conditioned rules with severity and definitive-vs-heuristic confidence labels; strictly read-only. Reach for it when the pages to check live in a codebase rather than behind a live URL. Era-adjudicated 2026: retired FAQ/HowTo rich-result guidance excised, GEO checks demoted to hypothesis.",
       "targeted_version": "softspark/ai-toolkit seo-validate @ HEAD, fetched 2026-08-10",
       "last_verified_at": "2026-08-10",
+      "treatment": "derivative",
       "derived_from": [
         {
           "id": "softspark/ai-toolkit/seo-validate",
@@ -99,6 +262,7 @@
           "content_hash_at_derivation": "0f350ff0a8d9945b9be7fd2aeba22491135813a31b21006a03d46a5d05e336c3"
         }
       ],
+      "synthesized_from": [],
       "era_pins": [
         "Google retired FAQ rich results for every site on 2026-05-07",
         "HowTo has been deprecated since September 2023",
@@ -128,11 +292,12 @@
       "slug": "ai-bot-log-audit",
       "skill_md": "skills/ai-bot-log-audit/SKILL.md",
       "sha256": "910261c827a36fc2f2c7ae72e2eeb2b188061baa10898af2cf25b54d048a1765",
-      "published_sha256": "61da6aeeeabc3ede44ec3aeb8ca3a0b2bccfcc2e0524d3ca3185cc371e48b940",
+      "published_sha256": "6221d937fd411f154a6306b0c9bc09b6ffa11827d4590eb75f8f293890411633",
       "license": "MIT",
       "description": "Method for reading Apache and Nginx access-log evidence to establish what GPTBot, ClaudeBot, PerplexityBot and peers actually fetch, skip, or error on, and which fixes each fetch pattern calls for. Reach for it when a citation-gap theory needs log rows behind it and you can export the raw logs. Domesticated 2026-08; the bot roster is carried from the wild source's 2026 table, not independently re-checked.",
       "targeted_version": "wild-2026 AI-crawler user-agent table, domesticated 2026-08",
       "last_verified_at": "2026-08-10",
+      "treatment": "derivative",
       "derived_from": [
         {
           "id": "guia-matthieu/clawfu-skills/ai-bot-log-audit",
@@ -141,6 +306,7 @@
           "content_hash_at_derivation": "8dfc675b2b1824bf3b82388da4c81c4bc598bbf0b27f05d73a02d38004ec1dfd"
         }
       ],
+      "synthesized_from": [],
       "era_pins": [
         "Google retired FAQ rich results for every site on 2026-05-07",
         "llms.txt is a proposed convention at roughly 0.015% adoption with no vendor confirmation",
@@ -152,11 +318,12 @@
       "slug": "geo-audit",
       "skill_md": "skills/geo-audit/SKILL.md",
       "sha256": "c139a4456503b182c0c0834ff202a4f39f9f5e8612fa8283c214fd670debefe9",
-      "published_sha256": "b5ed33dc1232ca74458d8349f04fa6cb4b9e3a0fbe44813bc49ac01d33b4b55b",
+      "published_sha256": "9fe0866583e938898c9f35c263f85f5171fb422a51e48f7bc79637286145111e",
       "license": "MIT",
       "description": "A scored technical audit of whether a live domain is legible to AI-search crawlers, current to 2026: one stdlib Python script, about 30 seconds, five load-bearing checks (robots.txt bot access, pre-JS rendering, sitemap, JSON-LD, internal links) with llms.txt reported as informational only. Reach for it when a site needs a fast numeric verdict on AI-crawler visibility before content spend; it refuses to emit numbers when the script cannot run or the domain will not resolve.",
       "targeted_version": "audit.py 1.0 (upstream HEAD, fetched 2026-08-10)",
       "last_verified_at": "2026-08-10",
+      "treatment": "derivative",
       "derived_from": [
         {
           "id": "vellum-ai/vellum-assistant/geo-audit",
@@ -165,6 +332,7 @@
           "content_hash_at_derivation": "256824ad7cdd84f6623f3712aa9fb83e0484b0fe35ff74d4df75e82aaf01cb7e"
         }
       ],
+      "synthesized_from": [],
       "era_pins": [
         "llms.txt is a proposed convention at roughly 0.015% adoption with no vendor confirmation",
         "Google retired FAQ rich results for every site on 2026-05-07",
@@ -181,11 +349,12 @@
       "slug": "seo",
       "skill_md": "skills/seo/SKILL.md",
       "sha256": "58640da8597b6fd8ee88ed0f15a8cb0d8eca09a938e3a8134e0a9a67446aa5f3",
-      "published_sha256": "6e2ca449d4e375f92159b58f56827005abdf170e9868b668ff4440109efba3f2",
+      "published_sha256": "bb6383ce787e2c49ee931dab1879f59be1f1ee36df476cafd2484c138ec7c6eb",
       "license": "MIT",
       "description": "Era-checked implementation reference and audit workflow for technical SEO and answer-engine (AEO) visibility, current to 2026: copy-paste JSON-LD, robots, canonical and hreflang blocks, vendored Lighthouse, PageSpeed and Search Console scripts, plus a load-bearing llms.txt caution. Reach for it when building or reviewing a site's markup, crawlability, or AI-citation posture; it will not recommend retired rich-result types.",
       "targeted_version": "Google Search / answer-engine guidance as of 2026-08",
       "last_verified_at": "2026-08-10",
+      "treatment": "derivative",
       "derived_from": [
         {
           "id": "addyosmani/web-quality-skills/seo",
@@ -212,6 +381,7 @@
           "content_hash_at_derivation": "50e6dc790d305a52c0e35c1d5abbb73d302ba4ef6e8473b699da5520d48c3b90"
         }
       ],
+      "synthesized_from": [],
       "era_pins": [
         "Google retired FAQ rich results for every site on 2026-05-07",
         "HowTo rich results have been deprecated since September 2023",
@@ -240,11 +410,12 @@
       "slug": "claude-seo",
       "skill_md": "skills/claude-seo/SKILL.md",
       "sha256": "6c6aa917b552011339589f43df9c082ddde2ded75e3a17e3f5492ab96590704d",
-      "published_sha256": "c41158747d5565a248abb17f0adb90d0c02046d1cac997392d7484e7b6483e42",
+      "published_sha256": "533e77821b188fc8f015c63f755ee0dc97b9d6cf5e356ae911d3a7a0c3680b67",
       "license": "MIT",
       "description": "Front door for a bundled SEO toolchain: /seo commands route bundled Python through the claude-seo launcher, with a doctor preflight and parallel full audits whose conditional specialists spawn only when site signals warrant them. Use it when an agent must produce client-grade SEO reports under 2026 rules — FAQ rich results retired, HowTo schema dead, llms.txt unproven — behind hard quality gates and with zero promotional content in deliverables.",
       "targeted_version": "2.2.4",
       "last_verified_at": "2026-08-10",
+      "treatment": "derivative",
       "derived_from": [
         {
           "id": "AgriciDaniel/claude-seo/seo",
@@ -271,6 +442,7 @@
           "content_hash_at_derivation": "7c5ed6805efbe63ff0e91588bffd46ef653836d04348151145e6780219e3839e"
         }
       ],
+      "synthesized_from": [],
       "era_pins": [
         "Google retired FAQ rich results for all sites on May 7, 2026",
         "HowTo schema (deprecated Sept 2023)",

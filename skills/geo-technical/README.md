@@ -2,10 +2,7 @@
 
 **Score a live site's readiness to be read by machines: fetch raw HTML, hold it against the browser render, and grade eight infrastructure categories out of 100 before any content or GEO work starts. Use when pages rank nowhere, AI assistants never cite the site, or a JavaScript framework may be hiding the copy from crawlers. Era-stamped for 2026 — retired rich-result types and unproven conventions stay out of the score.**
 
-An upgraded, era-verified derivative of [`zubair-trabzada/geo-seo-claude/geo-technical`](https://github.com/zubair-trabzada/geo-seo-claude) —
-1 defect fix and 2 excisions, with its guidance checked against platform reality current to 2026 (the kind
-of dated facts a wild skill silently predates). Conditions are stated, every workflow step ends
-in a runnable check, and what changed from the original is recorded with reasons.
+An upgraded, era-verified, defect-fixed derivative of [`zubair-trabzada/geo-seo-claude/geo-technical`](https://github.com/zubair-trabzada/geo-seo-claude), checked against platform reality current to 2026 (the kind of dated facts a wild skill silently predates). Conditions are stated, and every workflow step ends in a runnable check.
 
 ## Install
 
@@ -31,9 +28,6 @@ npx skills add skill-federation/seo-skills --skill geo-technical
 
 ## Provenance & trust
 
-Derived from [`zubair-trabzada/geo-seo-claude/geo-technical`](https://github.com/zubair-trabzada/geo-seo-claude) · MIT · last
-verified 2026-08-10. Every source, the full list of changes, and attribution are
-in [SKILL.md](SKILL.md); every vendored file is pinned by sha256 in the bundle's
-[`bundle.json`](../../bundle.json).
+Derived from [`zubair-trabzada/geo-seo-claude/geo-technical`](https://github.com/zubair-trabzada/geo-seo-claude) · MIT · last verified 2026-08-10. Attribution is in [SKILL.md](SKILL.md)'s Attribution section; every vendored file is pinned by sha256 in the bundle's [`bundle.json`](../../bundle.json).
 
 Part of the [seo-skills bundle](../../README.md) · curated by [skillfed.io](https://skillfed.io)

@@ -5,6 +5,7 @@
   "members": [
     {
       "slug": "geo-technical",
+      "skill_md": "skills/geo-technical/SKILL.md",
       "sha256": "593c7843b77896a475690c2a7a35681b3e60b4562bdcaf74e2756034eb5b9d8f",
       "license": "MIT",
       "description": "Score a live site's readiness to be read by machines: fetch raw HTML, hold it against the browser render, and grade eight infrastructure categories out of 100 before any content or GEO work starts. Use when pages rank nowhere, AI assistants never cite the site, or a JavaScript framework may be hiding the copy from crawlers. Era-stamped for 2026 — retired rich-result types and unproven conventions stay out of the score.",
@@ -30,6 +31,7 @@
     },
     {
       "slug": "ai-seo",
+      "skill_md": "skills/ai-seo/SKILL.md",
       "sha256": "72dad603e35b593139f298cff98d6a163a8dea8b378eb317902e337f316586fb",
       "license": "MIT",
       "description": "The GEO/AEO strategy layer for agents, current to Google's 2026 guidance split: answer features ride core ranking while ChatGPT, Claude, and Perplexity reward extractable structure. Load it when planning how a site earns AI citations, before any page edits. It interviews, adjudicates tactics per engine, and emits an evidence-tagged plan; it executes nothing, so pair it with an audit skill that actually fetches the site.",
@@ -80,6 +82,7 @@
     },
     {
       "slug": "seo-validate",
+      "skill_md": "skills/seo-validate/SKILL.md",
       "sha256": "4b9c5ae865ae1788de7b444c9e7e4f3ce62f8d582d5469655b2b8be94a3a924f",
       "license": "Apache-2.0",
       "description": "Repo-reading pre-ship SEO audit for source code: detects the framework first, then applies framework-conditioned rules with severity and definitive-vs-heuristic confidence labels; strictly read-only. Reach for it when the pages to check live in a codebase rather than behind a live URL. Era-adjudicated 2026: retired FAQ/HowTo rich-result guidance excised, GEO checks demoted to hypothesis.",
@@ -120,6 +123,7 @@
     },
     {
       "slug": "ai-bot-log-audit",
+      "skill_md": "skills/ai-bot-log-audit/SKILL.md",
       "sha256": "910261c827a36fc2f2c7ae72e2eeb2b188061baa10898af2cf25b54d048a1765",
       "license": "MIT",
       "description": "Method for reading Apache and Nginx access-log evidence to establish what GPTBot, ClaudeBot, PerplexityBot and peers actually fetch, skip, or error on, and which fixes each fetch pattern calls for. Reach for it when a citation-gap theory needs log rows behind it and you can export the raw logs. Domesticated 2026-08; the bot roster is carried from the wild source's 2026 table, not independently re-checked.",
@@ -142,6 +146,7 @@
     },
     {
       "slug": "geo-audit",
+      "skill_md": "skills/geo-audit/SKILL.md",
       "sha256": "c139a4456503b182c0c0834ff202a4f39f9f5e8612fa8283c214fd670debefe9",
       "license": "MIT",
       "description": "A scored technical audit of whether a live domain is legible to AI-search crawlers, current to 2026: one stdlib Python script, about 30 seconds, five load-bearing checks (robots.txt bot access, pre-JS rendering, sitemap, JSON-LD, internal links) with llms.txt reported as informational only. Reach for it when a site needs a fast numeric verdict on AI-crawler visibility before content spend; it refuses to emit numbers when the script cannot run or the domain will not resolve.",
@@ -169,6 +174,7 @@
     },
     {
       "slug": "seo",
+      "skill_md": "skills/seo/SKILL.md",
       "sha256": "58640da8597b6fd8ee88ed0f15a8cb0d8eca09a938e3a8134e0a9a67446aa5f3",
       "license": "MIT",
       "description": "Era-checked implementation reference and audit workflow for technical SEO and answer-engine (AEO) visibility, current to 2026: copy-paste JSON-LD, robots, canonical and hreflang blocks, vendored Lighthouse, PageSpeed and Search Console scripts, plus a load-bearing llms.txt caution. Reach for it when building or reviewing a site's markup, crawlability, or AI-citation posture; it will not recommend retired rich-result types.",
@@ -226,6 +232,7 @@
     },
     {
       "slug": "claude-seo",
+      "skill_md": "skills/claude-seo/SKILL.md",
       "sha256": "6c6aa917b552011339589f43df9c082ddde2ded75e3a17e3f5492ab96590704d",
       "license": "MIT",
       "description": "Front door for a bundled SEO toolchain: /seo commands route bundled Python through the claude-seo launcher, with a doctor preflight and parallel full audits whose conditional specialists spawn only when site signals warrant them. Use it when an agent must produce client-grade SEO reports under 2026 rules — FAQ rich results retired, HowTo schema dead, llms.txt unproven — behind hard quality gates and with zero promotional content in deliverables.",

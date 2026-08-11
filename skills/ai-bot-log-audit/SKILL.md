@@ -1,71 +1,19 @@
 ---
 name: ai-bot-log-audit
-description: >-
-  Method for reading Apache and Nginx access-log evidence to establish what
-  GPTBot, ClaudeBot, PerplexityBot and peers actually fetch, skip, or error
-  on, and which fixes each fetch pattern calls for. Reach for it when a
-  citation-gap theory needs log rows behind it and you can export the raw
-  logs. Domesticated 2026-08; the bot roster is carried from the wild
-  source's 2026 table, not independently re-checked.
-slug: ai-bot-log-audit
-treatment: derivative
-source_minibatch: 940
-derived_from:
-  - id: guia-matthieu/clawfu-skills/ai-bot-log-audit
-    role: base
-    license_at_derivation: MIT
-    content_hash_at_derivation: 8dfc675b2b1824bf3b82388da4c81c4bc598bbf0b27f05d73a02d38004ec1dfd
-files: []
-targeted_version: wild-2026 AI-crawler user-agent table, domesticated 2026-08
-era_pins:
-  - 'Google retired FAQ rich results for every site on 2026-05-07'
-  - 'llms.txt is a proposed convention at roughly 0.015% adoption with no vendor confirmation'
-  - 'carried unchanged from the wild source''s 2026 table; as of 2026-08 it has not been independently checked against operator documentation'
-last_verified_at: 2026-08-10
+description: Method for reading Apache and Nginx access-log evidence to establish what GPTBot, ClaudeBot,
+  PerplexityBot and peers actually fetch, skip, or error on, and which fixes each fetch pattern calls
+  for. Reach for it when a citation-gap theory needs log rows behind it and you can export the raw logs.
+  Domesticated 2026-08; the bot roster is carried from the wild source's 2026 table, not independently
+  re-checked.
 license: MIT
-needles:
-  present:
-    - 'Google retired FAQ rich results for every site on 2026-05-07'
-    - 'llms.txt is a proposed convention at roughly 0.015% adoption with no vendor confirmation'
-    - 'carried unchanged from the wild source''s 2026 table; as of 2026-08 it has not been independently checked against operator documentation'
-    - 'you bring the log data, this document brings the method'
-    - 'Do not fall back to theory'
-    - 'Page was evaluated and deprioritized'
-    - 'Place key claims, definitions, and statistics at the START and END of pages/sections'
-    - 'wc -l < ai_bots.log'
-    - 'Applebot-Extended)" | sort | uniq -c | sort -rn'
-    - 'User-agent strings in logs are self-declared'
-    - 'query live AI search results'
-    - 'technical SEO expertise for complex log analysis'
-    - 'a live opt-out token whose AI Overviews effect is unverified'
-    - 'this audit supplies the log evidence both act on'
-  absent:
-    - 'Bytespider|CCBot)'
-    - '@clawfu/mcp-skills'
-    - 'Related Skills'
-    - 'mode: centaur'
-    - '[2-3 sentence overview of findings]'
-dropped:
-  - needle: 'grep -oE "(GPTBot|ChatGPT-User|OAI-SearchBot|ClaudeBot|PerplexityBot|Bytespider|CCBot)" | sort | uniq -c | sort -rn'
-    reason: 'fixed-defect: the wild count-by-bot line omitted Applebot-Extended from its match pattern while the extraction command one line above included it, so extracted Applebot-Extended hits were never tallied; replaced by the identical command with Applebot-Extended added, plus a Phase 2 Verify that reconciles tally vs extraction totals so the defect class cannot recur silently'
-  - needle: 'version: 1.0.0 author: GUIA'
-    reason: 'excision: the wild trailing Skill Metadata YAML block (self-declared version 1.0.0, created/updated 2026-02-10, catalog tags, mode marker) is superseded by this frontmatter, the single authoritative metadata source; leaving it would give the document two competing identities'
-  - needle: '[2-3 sentence overview of findings]'
-    reason: 'excision: this generic placeholder line in the report template coincidentally matches a non-input batch member''s report template at the graft guard''s 0.50 section bar; reworded ("[Two or three sentences: what the logs showed]") so the derivative stays clear of every non-input body — no substance change'
-findings:
-  defects_fixed:
-    - 'Count-by-bot pipeline omitted Applebot-Extended from its match pattern while the extraction command included it, so those hits were extracted but never tallied - pattern extended and a tally-vs-extraction reconciliation Verify added in Phase 2'
-  security_findings:
-    - 'User-agent strings in access logs are self-declared and spoofable; caution added under What breaks first so UA-only identification is treated as provisional'
-    - 'Wild frontmatter carried a pointer to the author''s external MCP-server package; removed - nothing in this document requires installing anything'
-    - 'Only network calls instructed are curl fetches of the operator''s own pages in the Phase 4 Verify'
-  excised:
-    - 'Closing cross-reference list to five sibling skills in the wild author''s catalog (unreviewed here; a domesticated document does not forward readers to unvetted dependencies)'
-    - 'Trailing self-metadata YAML block (version 1.0.0, created/updated 2026-02-10) - superseded by this frontmatter'
-    - 'Wild frontmatter mcp-server package pointer'
-  grafts: []
-license_notes:
-  - 'guia-matthieu/clawfu-skills/ai-bot-log-audit: the only license string in the body scan is the frontmatter license: MIT, which restates the repo license (agreement, not conflict); no embedded third-party license declarations found'
+treatment: derivative
+derived_from:
+- id: guia-matthieu/clawfu-skills/ai-bot-log-audit
+  role: base
+  license_at_derivation: MIT
+  content_hash_at_derivation: 8dfc675b2b1824bf3b82388da4c81c4bc598bbf0b27f05d73a02d38004ec1dfd
+targeted_version: wild-2026 AI-crawler user-agent table, domesticated 2026-08
+last_verified_at: 2026-08-10
 ---
 
 # AI Bot Log Audit

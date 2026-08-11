@@ -1,93 +1,23 @@
 ---
 name: ai-seo
-description: "The GEO/AEO strategy layer for agents, current to Google's 2026 guidance split: answer features ride core ranking while ChatGPT, Claude, and Perplexity reward extractable structure. Load it when planning how a site earns AI citations, before any page edits. It interviews, adjudicates tactics per engine, and emits an evidence-tagged plan; it executes nothing, so pair it with an audit skill that actually fetches the site."
-slug: ai-seo
-treatment: derivative
-source_minibatch: 940
-derived_from:
-  - id: coreyhaines31/marketingskills/ai-seo
-    role: base
-    license_at_derivation: MIT
-    content_hash_at_derivation: cb70d0b5daf4cfe3cad30ca897007347bb3dc150c9384497334dbd9122c0143c
-  - id: b1rdmania/ghostclaw/ai-seo
-    role: superseded
-    license_at_derivation: MIT
-    content_hash_at_derivation: 7ef9eac488baafde07c816f6c24c1b250995bef730882cc05e4dfe32978d93eb
-files:
-  - path: references/citations-vs-recommendations.md
-    sha256: 88016418b43b7e798dd950eb1240f76dec08c3408038f9a5d83005aff5a4daa3
-    source_url: https://raw.githubusercontent.com/coreyhaines31/marketingskills/HEAD/skills/ai-seo/references/citations-vs-recommendations.md
-    from_skill_id: coreyhaines31/marketingskills/ai-seo
-    license: MIT
-    fetched_at: 2026-08-10
-  - path: references/content-patterns.md
-    sha256: 8adcfcc020a3529eda71f783e4893d3e39e8b0f503fd2fa126e8b75a80963824
-    source_url: https://raw.githubusercontent.com/coreyhaines31/marketingskills/HEAD/skills/ai-seo/references/content-patterns.md
-    from_skill_id: coreyhaines31/marketingskills/ai-seo
-    license: MIT
-    fetched_at: 2026-08-10
-  - path: references/content-types.md
-    sha256: 9ad0a871f866efa307fc0d6fe2bd19d443a2276cb396afdd5b4d81fe9b4167e3
-    source_url: https://raw.githubusercontent.com/coreyhaines31/marketingskills/HEAD/skills/ai-seo/references/content-types.md
-    from_skill_id: coreyhaines31/marketingskills/ai-seo
-    license: MIT
-    fetched_at: 2026-08-10
-  - path: references/okf.md
-    sha256: 4abcab5b8ee90b63c5d09c98387a8ec3cdb8f5df33e75d3b4b91eb817283bfd8
-    source_url: https://raw.githubusercontent.com/coreyhaines31/marketingskills/HEAD/skills/ai-seo/references/okf.md
-    from_skill_id: coreyhaines31/marketingskills/ai-seo
-    license: MIT
-    fetched_at: 2026-08-10
-  - path: references/platform-ranking-factors.md
-    sha256: ca3fb8c09fec3445abe611bab2cd1b5f20751c5d51a3a5c63ecd2b85cd458ee8
-    source_url: https://raw.githubusercontent.com/coreyhaines31/marketingskills/HEAD/skills/ai-seo/references/platform-ranking-factors.md
-    from_skill_id: coreyhaines31/marketingskills/ai-seo
-    license: MIT
-    fetched_at: 2026-08-10
-targeted_version: "2.2.0"
-era_pins:
-  - "targets the 2.2.0 line of coreyhaines31/marketingskills/ai-seo; the same-name fork b1rdmania/ghostclaw/ai-seo is frozen at 1.1.0 and is missing the Google-stance section and the query fan-out material"
-  - "Google's generative AI features on Search are rooted in its core Search ranking and quality systems — nothing has to be added to a page for them"
-  - "producing an AI-targeted variant of your content falls under Google's scaled-content spam policy"
-  - "the Princeton GEO study (KDD 2024) ranks citing sources at the top of its nine-method list at roughly +40% visibility, while keyword stuffing at the bottom actively costs roughly 10%"
-last_verified_at: 2026-08-10
+description: 'The GEO/AEO strategy layer for agents, current to Google''s 2026 guidance split: answer
+  features ride core ranking while ChatGPT, Claude, and Perplexity reward extractable structure. Load
+  it when planning how a site earns AI citations, before any page edits. It interviews, adjudicates tactics
+  per engine, and emits an evidence-tagged plan; it executes nothing, so pair it with an audit skill that
+  actually fetches the site.'
 license: MIT
-needles:
-  present:
-    - "targets the 2.2.0 line of coreyhaines31/marketingskills/ai-seo; the same-name fork b1rdmania/ghostclaw/ai-seo is frozen at 1.1.0 and is missing the Google-stance section and the query fan-out material"
-    - "Google's generative AI features on Search are rooted in its core Search ranking and quality systems — nothing has to be added to a page for them"
-    - "producing an AI-targeted variant of your content falls under Google's scaled-content spam policy"
-    - "the Princeton GEO study (KDD 2024) ranks citing sources at the top of its nine-method list at roughly +40% visibility, while keyword stuffing at the bottom actively costs roughly 10%"
-    - "it asks questions and produces a plan; it runs nothing"
-    - "Citation ≠ recommendation"
-    - "never sold to a client as a Google lever"
-    - "no major AI vendor has confirmed that it reads `llms.txt`"
-    - "Google retired FAQ rich results for every site on May 7, 2026"
-    - "HowTo rich results have been deprecated since Sept 2023"
-    - "predates the rich-results retirements dated in Era"
-    - "whether blocking it affects AI Overviews inclusion is unverified"
-    - "existing HowTo may stay; never add HowTo"
-  absent:
-    - "tools/REGISTRY.md"
-    - "They parse `llms.txt`"
-    - "that is Google's own framing, not an interpretation"
-    - "— Google Gemini and AI Overviews"
-    - "may add it for non-Google engines"
-dropped: []
-findings:
-  defects_fixed:
-    - "The base declares no execution boundary: it reads like an audit but asks questions and produces a plan — it runs nothing. Conditions now state this as a hard condition, require pairing with an executing audit skill for any claim about a live site, and every Verify step checks the produced plan artifact rather than pretending to check the site."
-    - "Dead link: the base's Tool Integrations section pointed at ../../tools/REGISTRY.md, a path that resolves only inside the upstream marketingskills repository. Link removed; the tool table is kept."
-    - "Stage-2 finding: the vendored references/platform-ranking-factors.md predates the rich-results corrections and still recommends FAQPage/HowTo as a Google AI Overviews lever. Dated caveats added at both body link points; the hash-pinned file itself is untouched."
-  security_findings:
-    - "No executable surface: the document ships no scripts, declares no tools, and instructs no calls to third-party services. The only external references are documentation URLs. All Verify commands operate on the operator's own artifacts, or (post-implementation) on the operator's own site."
-  excised:
-    - "The base's assertion that non-Google engines parse llms.txt when present — an unverified vendor-behavior claim. Replaced with the batch-940 editorial finding (2026-07-30) that no major AI vendor has confirmed reading llms.txt; the file is kept as a cheap, speculative addition, never load-bearing."
-    - "The ../../tools/REGISTRY.md link (see defects_fixed)."
-    - "The base's unhedged claim that Google-Extended governs Gemini AND AI Overviews citation ('literally cannot cite you') — replaced with an explicit unverified-status hedge matching the llms.txt treatment: no input confirms the claim and it sits in tension with the core-Search era pin."
-  grafts: []
-license_notes:
-  - "references/okf.md (vendored, MIT) mentions that a third-party WordPress plugin is 'free, GPL' — a description of that plugin's own license, not a licensing term on this document or any input; the file is carried verbatim under the base repository's MIT license."
+treatment: derivative
+derived_from:
+- id: coreyhaines31/marketingskills/ai-seo
+  role: base
+  license_at_derivation: MIT
+  content_hash_at_derivation: cb70d0b5daf4cfe3cad30ca897007347bb3dc150c9384497334dbd9122c0143c
+- id: b1rdmania/ghostclaw/ai-seo
+  role: superseded
+  license_at_derivation: MIT
+  content_hash_at_derivation: 7ef9eac488baafde07c816f6c24c1b250995bef730882cc05e4dfe32978d93eb
+targeted_version: 2.2.0
+last_verified_at: 2026-08-10
 ---
 
 # AI SEO — the strategy layer

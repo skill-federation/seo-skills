@@ -1,144 +1,18 @@
 ---
 name: seo-validate
-description: >-
-  Repo-reading pre-ship SEO audit for source code: detects the framework
-  first, then applies framework-conditioned rules with severity and
-  definitive-vs-heuristic confidence labels; strictly read-only. Reach for it
-  when the pages to check live in a codebase rather than behind a live URL.
-  Era-adjudicated 2026: retired FAQ/HowTo rich-result guidance excised, GEO
-  checks demoted to hypothesis.
-slug: seo-validate
-treatment: derivative
-source_minibatch: 940
-derived_from:
-  - id: softspark/ai-toolkit/seo-validate
-    role: base
-    license_at_derivation: Apache-2.0
-    content_hash_at_derivation: 0f350ff0a8d9945b9be7fd2aeba22491135813a31b21006a03d46a5d05e336c3
-files:
-  - path: reference/w3c-guidelines.md
-    sha256: ec5dd3b7356bd80129fbb62592914b2d448c0b84549b7c995388ee85ce1158cb
-    source_url: https://raw.githubusercontent.com/softspark/ai-toolkit/HEAD/app/skills/seo-validate/reference/w3c-guidelines.md
-    from_skill_id: softspark/ai-toolkit/seo-validate
-    license: Apache-2.0
-    fetched_at: 2026-08-10
-  - path: reference/core-web-vitals.md
-    sha256: 3a5db2c3519899098ba85f44f67de0371e57f8d46300cec0dd92203ab36bdcf1
-    source_url: https://raw.githubusercontent.com/softspark/ai-toolkit/HEAD/app/skills/seo-validate/reference/core-web-vitals.md
-    from_skill_id: softspark/ai-toolkit/seo-validate
-    license: Apache-2.0
-    fetched_at: 2026-08-10
-  - path: reference/spa-ssg-patterns.md
-    sha256: 8271f0c3fcb9e52eb368f28b74e9975ba28d1f0fb8d9a72881eb62ad85962eb6
-    source_url: https://raw.githubusercontent.com/softspark/ai-toolkit/HEAD/app/skills/seo-validate/reference/spa-ssg-patterns.md
-    from_skill_id: softspark/ai-toolkit/seo-validate
-    license: Apache-2.0
-    fetched_at: 2026-08-10
-  - path: scripts/seo-scanner.py
-    sha256: 58fd4f2ed646e1f567f1e59e43296f48ff506bf62d733c27a286881cc540d94b
-    source_url: https://raw.githubusercontent.com/softspark/ai-toolkit/HEAD/app/skills/seo-validate/scripts/seo-scanner.py
-    from_skill_id: softspark/ai-toolkit/seo-validate
-    license: Apache-2.0
-    fetched_at: 2026-08-10
-targeted_version: "softspark/ai-toolkit seo-validate @ HEAD, fetched 2026-08-10"
-era_pins:
-  - "Google retired FAQ rich results for every site on 2026-05-07"
-  - "HowTo has been deprecated since September 2023"
-  - "roughly 0.015% adoption with no vendor confirmation"
-  - "chunking content for AI is the exact practice Google names as a mistake"
-last_verified_at: 2026-08-10
+description: 'Repo-reading pre-ship SEO audit for source code: detects the framework first, then applies
+  framework-conditioned rules with severity and definitive-vs-heuristic confidence labels; strictly read-only.
+  Reach for it when the pages to check live in a codebase rather than behind a live URL. Era-adjudicated
+  2026: retired FAQ/HowTo rich-result guidance excised, GEO checks demoted to hypothesis.'
 license: Apache-2.0
-needles:
-  present:
-    - "Google retired FAQ rich results for every site on 2026-05-07"
-    - "HowTo has been deprecated since September 2023"
-    - "roughly 0.015% adoption with no vendor confirmation"
-    - "chunking content for AI is the exact practice Google names as a mistake"
-    - 'Above-the-fold `<img loading="lazy">`'
-    - "Never modify any files"
-    - "read as a hypothesis, never a checklist"
-    - "Never recommend adding FAQPage or HowTo for Google benefit"
-    - "whether it also affects AI Overviews inclusion is unverified"
-    - "a green scanner exit is not a pass on them"
-  absent:
-    - "FAQ rich result needs Q&A pairs"
-    - "Highly extractable by LLMs"
-    - "AI cannot extract cleanly"
-    - "Each section must be a self-contained answer unit"
-    - "Gemini training (NOT AI Overviews)"
-dropped:
-  - needle: "reference/schema-types.md ('Triggers rich FAQ results in SERP.'; HowTo listed among rich-result-eligible types)"
-    reason: >-
-      Era-stale reference file excluded from the vendored set: vendoring it
-      unmodified would reimport retired rich-result guidance (FAQ retired for
-      every site 2026-05-07; HowTo deprecated September 2023). The still-valid
-      type coverage - the required-property matrix plus Event, WebSite/
-      SearchAction, Recipe and VideoObject notes and the common-mistake items
-      - is folded into Category 3; the full JSON-LD templates are not carried
-      (author against validator.schema.org).
-  - needle: "reference/geo-aeo-patterns.md ('FAQPage is the highest-precision signal'; HowTo schema pattern checks; 'llms.txt present at domain root' checklist)"
-    reason: >-
-      Era-stale reference file excluded: treats FAQPage and HowTo as live
-      answer-engine options and instructs standing up llms.txt, all on the
-      wrong side of the 2026 era facts stated in ## Era. Its era-clean
-      robots.txt AI-crawler directives (the User-agent table and the
-      Googlebot/Google-Extended caution) are folded into Category 8.
-  - needle: "reference/geo-guidelines.md ('The 375-word rule'; 'Pair with HowTo schema for critical procedures')"
-    reason: >-
-      Era-stale reference file excluded: teaches chunking-for-AI as a rule and
-      HowTo as a live pairing. Chunking for AI is the practice Google names as
-      a mistake; corrected guidance lives in Category 6 of the body. Its
-      era-clean native details/summary DOM-visibility exemption is folded
-      into the Category 6 hidden-content row.
-  - needle: "reference/content-citability.md ('Each H2 section should stay within ~375 words. If a section exceeds this, split with an H3 sub-heading')"
-    reason: >-
-      Era-stale reference file excluded: its chunk-architecture section
-      teaches restructuring content to a claimed 500-token retrieval window as
-      a rule. Demoted to hypothesis in Category 6 instead of vendored.
-  - needle: "reference/ai-pipeline.md (format-routing table maps 'how to X' queries to HowTo and persona queries to FAQPage; chunk-position targeting strategy)"
-    reason: >-
-      Era-stale reference file excluded: routes queries to retired/deprecated
-      schema types as live signals and teaches chunk-position targeting;
-      single uncorroborated agency source throughout.
-  - needle: "Pattern: CSR-only React app (Vite) with no prerender plugin"
-    reason: >-
-      Excuses the Output Format template block, which is carried in full with
-      two anchor corrections: the base's sample findings point their See:
-      lines at headings that do not exist in its own reference files;
-      corrected to the real headings (#above-the-fold-heuristics,
-      #prerendering-strategies-for-spas). Pre-existing base defect.
-  - needle: "$ARGUMENTS harness macro and original command frontmatter (user-invocable, argument-hint, allowed-tools, agent)"
-    reason: >-
-      Not portable into the domesticated-skill frontmatter model; the CLI
-      flags the macro carried are documented verbatim under ## Usage.
-findings:
-  defects_fixed:
-    - "Category 3 FAQPage row demoted WARN to INFO and re-dated: structural validation of existing markup only, reported as informational (FAQ rich results retired for every site 2026-05-07)"
-    - "Category 6 chunking row demoted WARN to INFO and stripped of its restructure-for-AI imperative; the whole GEO category demoted to hypothesis tier, read as hypothesis never checklist"
-    - "Category 6 add-FAQPage recommendation row replaced with an informational existing-FAQPage/HowTo flag; recommending either for Google benefit is now explicitly forbidden"
-    - "Category 10 AI-signal rationale (Gecko, Blyskall figures, AI-citation rates) conditioned to the same hypothesis tier; the structural link checks stay load-bearing"
-    - "Vendored scanner's llms.txt INFO finding era-conditioned in the body: informational-only, never a recommended fix (roughly 0.015% adoption, no vendor confirmation)"
-    - "Top summary, Rules, and Usage scopes re-labeled so GEO output can never be read as a checklist; new rule bullet forbids recommending retired rich-result schema"
-    - "Era-clean AI-crawler robots.txt directives recovered from the excluded AEO reference and folded into Category 8 (User-agent table; blocking Googlebot blocks AI Overviews - Google-Extended is the Gemini-training opt-out, its effect on AI Overviews inclusion unverified per the Stage 2.5 bundle adjudication) with two new intent-check rows"
-    - "Remaining clean schema-type coverage folded into Category 3 (Event, WebSite/SearchAction, Recipe, VideoObject, case-sensitive @type, no fabricated ratings); native details/summary DOM-visibility exemption restored in the Category 6 hidden-content row"
-    - "Two dead anchor fragments in the sample report corrected to real headings (#above-the-fold-heuristics, #prerendering-strategies-for-spas) - pre-existing base defect"
-  security_findings:
-    - "Editorial review of scripts/seo-scanner.py (19,211 bytes): Python stdlib only, filesystem reads only, no network egress, no file writes, no subprocess use; exit codes 0 (clean), 1 (HIGH findings), 2 (bad path). Consistent with the document's read-only contract."
-  excised:
-    - "reference/schema-types.md - presents FAQ rich results as live SERP features and HowTo as rich-result-eligible"
-    - "reference/geo-aeo-patterns.md - FAQPage as highest-precision answer-engine signal, HowTo pattern checks, llms.txt-at-domain-root checklist"
-    - "reference/geo-guidelines.md - 375-word chunk checklist and pair-with-HowTo instruction"
-    - "reference/content-citability.md - chunk-architecture rules (keep H2 under ~375 words, split with an H3)"
-    - "reference/ai-pipeline.md - routes how-to queries to HowTo and persona queries to FAQPage; chunk-position targeting"
-    - "Original harness frontmatter and the $ARGUMENTS macro (flags documented under Usage)"
-  grafts: []
-license_notes:
-  - >-
-    softspark/ai-toolkit/seo-validate: repo and skill license Apache-2.0; the
-    SKILL.md body carries no embedded license declaration. The vendored
-    scripts/seo-scanner.py header declares 'SPDX-License-Identifier:
-    Apache-2.0' (Copyright 2024-2026 Lukasz Krzemien), agreeing with the repo
-    license - no doc-level conflict.
+treatment: derivative
+derived_from:
+- id: softspark/ai-toolkit/seo-validate
+  role: base
+  license_at_derivation: Apache-2.0
+  content_hash_at_derivation: 0f350ff0a8d9945b9be7fd2aeba22491135813a31b21006a03d46a5d05e336c3
+targeted_version: softspark/ai-toolkit seo-validate @ HEAD, fetched 2026-08-10
+last_verified_at: 2026-08-10
 ---
 
 # seo-validate — SEO Validation Scanner (domesticated derivative)

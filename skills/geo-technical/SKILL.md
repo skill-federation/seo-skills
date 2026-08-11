@@ -1,60 +1,19 @@
 ---
 name: geo-technical
-description: >-
-  Score a live site's readiness to be read by machines: fetch raw HTML, hold it
-  against the browser render, and grade eight infrastructure categories out of
-  100 before any content or GEO work starts. Use when pages rank nowhere, AI
-  assistants never cite the site, or a JavaScript framework may be hiding the
-  copy from crawlers. Era-stamped for 2026 — retired rich-result types and
-  unproven conventions stay out of the score.
-slug: geo-technical
-treatment: derivative
-source_minibatch: 940
-derived_from:
-  - id: zubair-trabzada/geo-seo-claude/geo-technical
-    role: base
-    license_at_derivation: MIT
-    content_hash_at_derivation: 602355e470fff83367651c25068c5b51515f44cc7cf19c8aa3eaf5a9accb720b
-files: []
-targeted_version: "web and AI-crawler behavior as of 2026-08"
-era_pins:
-  - "AI crawlers do not execute JavaScript"
-  - "Google retired FAQ rich results for every site on 2026-05-07"
-  - "HowTo has been deprecated since Sept 2023"
-  - "llms.txt is a proposed convention at roughly 0.015% adoption with no vendor confirmation"
-  - "Google crawls ALL sites exclusively with mobile Googlebot"
-  - "INP replaced FID in March 2024"
-last_verified_at: 2026-08-10
+description: 'Score a live site''s readiness to be read by machines: fetch raw HTML, hold it against the
+  browser render, and grade eight infrastructure categories out of 100 before any content or GEO work
+  starts. Use when pages rank nowhere, AI assistants never cite the site, or a JavaScript framework may
+  be hiding the copy from crawlers. Era-stamped for 2026 — retired rich-result types and unproven conventions
+  stay out of the score.'
 license: MIT
-needles:
-  present:
-    - "AI crawlers do not execute JavaScript"
-    - "Google retired FAQ rich results for every site on 2026-05-07"
-    - "HowTo has been deprecated since Sept 2023"
-    - "llms.txt is a proposed convention at roughly 0.015% adoption with no vendor confirmation"
-    - "Google crawls ALL sites exclusively with mobile Googlebot"
-    - "INP replaced FID in March 2024"
-    - "penalizing absence would be unfair"
-    - "Omit this section entirely for standard business sites"
-    - "Blocking Google-Extended does NOT block Googlebot"
-    - "Whether blocking Google-Extended affects AI Overviews inclusion is unverified"
-    - "Above-fold images should NOT be lazy loaded"
-  absent:
-    - "Configure parameter handling in Google Search Console"
-    - "Prerender.io (prerendering service), Rendertron"
-    - "may reduce presence in AI Overviews"
-dropped: []
-findings:
-  defects_fixed:
-    - "Bundle review (Stage 2.5, finding 1): the base's 1.2 nuance asserted a possible AI Overviews presence cost for blocking Google-Extended - an unverified vendor-behavior claim. Replaced with the bundle's adjudicated wording: the effect on AI Overviews inclusion is unverified (2026-08-10); blocking Googlebot is what verifiably removes AI Overviews presence."
-  security_findings:
-    - "Every fenced Verify command is a read-only HTTP fetch of the audited domain — none contacts a third-party endpoint — and the only local write is the generated report file. Retained base guidance involves third parties when followed: the site: operator estimate in 2.5 queries a search engine, and 4.4 configures Bing Webmaster Tools."
-    - "Category 1's Verify block sends an AI-crawler User-Agent string to the audited site as a WAF-vs-robots.txt diagnostic; run it only against sites you are authorized to audit."
-  excised:
-    - "4.4: removed the instruction to configure URL-parameter handling in Google Search Console — the tool it named is retired (writer-suspected, reviewer-confirmed) and the step cannot be executed; the Bing Webmaster Tools half is kept."
-    - "Category 7 SSR-solutions table: removed the Rendertron recommendation — archived upstream (writer-suspected, reviewer-confirmed); Prerender.io remains as the generic option."
-  grafts: []
-license_notes: []
+treatment: derivative
+derived_from:
+- id: zubair-trabzada/geo-seo-claude/geo-technical
+  role: base
+  license_at_derivation: MIT
+  content_hash_at_derivation: 602355e470fff83367651c25068c5b51515f44cc7cf19c8aa3eaf5a9accb720b
+targeted_version: web and AI-crawler behavior as of 2026-08
+last_verified_at: 2026-08-10
 ---
 
 # GEO Technical SEO Audit

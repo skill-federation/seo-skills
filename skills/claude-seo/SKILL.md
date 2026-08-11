@@ -1,158 +1,31 @@
 ---
 name: claude-seo
-description: "Front door for a bundled SEO toolchain: /seo commands route bundled Python through the claude-seo launcher, with a doctor preflight and parallel full audits whose conditional specialists spawn only when site signals warrant them. Use it when an agent must produce client-grade SEO reports under 2026 rules — FAQ rich results retired, HowTo schema dead, llms.txt unproven — behind hard quality gates and with zero promotional content in deliverables."
-slug: claude-seo
-treatment: derivative
-source_minibatch: 940
-derived_from:
-  - id: AgriciDaniel/claude-seo/seo
-    role: base
-    license_at_derivation: MIT
-    content_hash_at_derivation: 5db52596dcc89608765afd9383e8ad81fb1e3768cb8c7c23275b2fe714efd421
-  - id: AgriciDaniel/codex-seo/seo
-    role: sibling
-    license_at_derivation: NOASSERTION
-    content_hash_at_derivation: 186470fe99a1cc7ee43151be743117080865f44c3abebdf5cd8782fea3f52c0b
-  - id: AgriciDaniel/claude-seo/seo-audit
-    role: sibling
-    license_at_derivation: MIT
-    content_hash_at_derivation: badb9495a725a07beed4957e8b1ec1732ecb48312002d64babb0ff710e278170
-  - id: AgriciDaniel/codex-seo/seo-audit
-    role: sibling
-    license_at_derivation: NOASSERTION
-    content_hash_at_derivation: 7c5ed6805efbe63ff0e91588bffd46ef653836d04348151145e6780219e3839e
-files:
-  - path: LICENSE.txt
-    sha256: 5c617ae0aa59b995e19b3e774fcc2f2ba91b864e0b4c3e18475b139526a2da1e
-    source_url: https://raw.githubusercontent.com/AgriciDaniel/claude-seo/HEAD/skills/seo/LICENSE.txt
-    from_skill_id: AgriciDaniel/claude-seo/seo
-    license: MIT
-    fetched_at: 2026-08-10
-  - path: references/backlink-quality.md
-    sha256: 86a39d009b19f4f17a3dc4461afe209111dc2e8df56b6bd3eecedf5b4a03f742
-    source_url: https://raw.githubusercontent.com/AgriciDaniel/claude-seo/HEAD/skills/seo/references/backlink-quality.md
-    from_skill_id: AgriciDaniel/claude-seo/seo
-    license: MIT
-    fetched_at: 2026-08-10
-  - path: references/cwv-thresholds.md
-    sha256: 0144772e781f532eb1263c2bacd15940f429de704ac123f60c6714bcac4a9816
-    source_url: https://raw.githubusercontent.com/AgriciDaniel/claude-seo/HEAD/skills/seo/references/cwv-thresholds.md
-    from_skill_id: AgriciDaniel/claude-seo/seo
-    license: MIT
-    fetched_at: 2026-08-10
-  - path: references/eeat-framework.md
-    sha256: 6550ca35ca94180686c32e907baf3bb544832cc3c612a7df0b0afef0d0e279be
-    source_url: https://raw.githubusercontent.com/AgriciDaniel/claude-seo/HEAD/skills/seo/references/eeat-framework.md
-    from_skill_id: AgriciDaniel/claude-seo/seo
-    license: MIT
-    fetched_at: 2026-08-10
-  - path: references/free-backlink-sources.md
-    sha256: f704d91049331bfdf87e1a7ca09089a799306d4dc72f2c735260ffaf5870666d
-    source_url: https://raw.githubusercontent.com/AgriciDaniel/claude-seo/HEAD/skills/seo/references/free-backlink-sources.md
-    from_skill_id: AgriciDaniel/claude-seo/seo
-    license: MIT
-    fetched_at: 2026-08-10
-  - path: references/local-schema-types.md
-    sha256: f3541c86511199abaf2237cea7a1aa70bca8c94c82c243517b0a7656f96ee5c1
-    source_url: https://raw.githubusercontent.com/AgriciDaniel/claude-seo/HEAD/skills/seo/references/local-schema-types.md
-    from_skill_id: AgriciDaniel/claude-seo/seo
-    license: MIT
-    fetched_at: 2026-08-10
-  - path: references/local-seo-signals.md
-    sha256: 0e40f049ff024b7ab411654c35904047c32672125e8d26cd593c465582bf167d
-    source_url: https://raw.githubusercontent.com/AgriciDaniel/claude-seo/HEAD/skills/seo/references/local-seo-signals.md
-    from_skill_id: AgriciDaniel/claude-seo/seo
-    license: MIT
-    fetched_at: 2026-08-10
-  - path: references/maps-api-endpoints.md
-    sha256: a5a4cdc9b66edddfd3e823b09a6489dc638023abb4e7c0c94207be9ced0618be
-    source_url: https://raw.githubusercontent.com/AgriciDaniel/claude-seo/HEAD/skills/seo/references/maps-api-endpoints.md
-    from_skill_id: AgriciDaniel/claude-seo/seo
-    license: MIT
-    fetched_at: 2026-08-10
-  - path: references/maps-free-apis.md
-    sha256: 18323486ddd52eaa8e86f7f22930fc065f7c9b529352eadda8c27dca44299b91
-    source_url: https://raw.githubusercontent.com/AgriciDaniel/claude-seo/HEAD/skills/seo/references/maps-free-apis.md
-    from_skill_id: AgriciDaniel/claude-seo/seo
-    license: MIT
-    fetched_at: 2026-08-10
-  - path: references/maps-gbp-checklist.md
-    sha256: 61eead0eac4717d4d7fa8f6186d43f98e2af9850ed483726138b28e28ce0d3a7
-    source_url: https://raw.githubusercontent.com/AgriciDaniel/claude-seo/HEAD/skills/seo/references/maps-gbp-checklist.md
-    from_skill_id: AgriciDaniel/claude-seo/seo
-    license: MIT
-    fetched_at: 2026-08-10
-  - path: references/maps-geo-grid.md
-    sha256: 76e08cd3fefb4d0367e0647895c482e1914a932dc86de4a82dc2d03b987855e4
-    source_url: https://raw.githubusercontent.com/AgriciDaniel/claude-seo/HEAD/skills/seo/references/maps-geo-grid.md
-    from_skill_id: AgriciDaniel/claude-seo/seo
-    license: MIT
-    fetched_at: 2026-08-10
-  - path: references/quality-gates.md
-    sha256: 5dec0bf50a443546cf4f222259cdcdfe2a891fcf97dd2278df59264c7738d36f
-    source_url: https://raw.githubusercontent.com/AgriciDaniel/claude-seo/HEAD/skills/seo/references/quality-gates.md
-    from_skill_id: AgriciDaniel/claude-seo/seo
-    license: MIT
-    fetched_at: 2026-08-10
-  - path: references/schema-types.md
-    sha256: b829bb44b17bc32032a1036c925ecd0a172a6f1ea23c6c00edd1893fbc2b19cf
-    source_url: https://raw.githubusercontent.com/AgriciDaniel/claude-seo/HEAD/skills/seo/references/schema-types.md
-    from_skill_id: AgriciDaniel/claude-seo/seo
-    license: MIT
-    fetched_at: 2026-08-10
-  - path: references/thinking-framework.md
-    sha256: de17f2b1f7017f8b0f0f0e7b137f8d3db1ee58f01b7f275fe95259ea81e92793
-    source_url: https://raw.githubusercontent.com/AgriciDaniel/claude-seo/HEAD/skills/seo/references/thinking-framework.md
-    from_skill_id: AgriciDaniel/claude-seo/seo
-    license: MIT
-    fetched_at: 2026-08-10
-targeted_version: "2.2.4"
-era_pins:
-  - "Google retired FAQ rich results for all sites on May 7, 2026"
-  - "HowTo schema (deprecated Sept 2023)"
-  - "roughly 0.015% adoption with no vendor confirmation"
-  - "INP, never FID"
-last_verified_at: 2026-08-10
+description: 'Front door for a bundled SEO toolchain: /seo commands route bundled Python through the claude-seo
+  launcher, with a doctor preflight and parallel full audits whose conditional specialists spawn only
+  when site signals warrant them. Use it when an agent must produce client-grade SEO reports under 2026
+  rules — FAQ rich results retired, HowTo schema dead, llms.txt unproven — behind hard quality gates and
+  with zero promotional content in deliverables.'
 license: MIT
-needles:
-  present:
-    - "Google retired FAQ rich results for all sites on May 7, 2026"
-    - "HowTo schema (deprecated Sept 2023)"
-    - "roughly 0.015% adoption with no vendor confirmation"
-    - "INP, never FID"
-    - "HARD STOP at 50+ location pages (require user justification)"
-    - "Flag existing FAQPage at Info (not Critical)"
-    - "do not recommend new FAQPage for Google SERP benefit"
-    - "zero citation weight"
-    - "claude-seo doctor --json"
-    - "Never invoke bundled scripts with a bare Python interpreter"
-    - "Acquire that first; nothing in this bundle provides it"
-    - "neither reconstructs a past you didn't baseline"
-  absent:
-    - "append this footer as the very last output"
-    - "Join the AI Marketing Hub"
-    - "skool.com/ai-marketing-hub"
-    - "## Community Footer"
-    - "41 AI prompts"
-    - "Find -> Leverage -> Optimize -> Win"
-dropped:
-  - needle: "Built by agricidaniel — Join the AI Marketing Hub community"
-    reason: "The base's only fenced code block is a promotional community footer (author byline plus free and paid skool.com community links) that the base instructs appending to every major deliverable, including client audit reports. The declared defect of this domestication: the block and the entire instruction section around it (show/skip lists included) are excised, and the audit Verify step now greps deliverables to prove such content is absent."
-findings:
-  defects_fixed:
-    - "Base offers PDF generation 'via scripts/google_report.py', a path absent from the skill's own shipped file tree (skills/seo/ contains only LICENSE.txt and references/); replaced with the equivalent launcher-mediated command /seo google report full, which the base itself documents in its orchestration step 15."
-    - "Base ships references/backlink-quality.md and references/free-backlink-sources.md but never lists them in its Reference Files section; both are now listed (under the seo-backlinks entry) so every vendored file is reachable from the body."
-    - "Base references references/thinking-framework.md inline (Synthesis Methodology) but omits it from its Reference Files index; added to the on-demand list — same unlisted-shipped-file class as the backlinks references."
-  security_findings:
-    - "All eight optional extensions (firecrawl, dataforseo, image-gen, ahrefs, bing, profound, seranking, unlighthouse) call third-party APIs: the URLs, keywords, and log-derived queries being analyzed leave the machine to those vendors. Surfaced as explicit Prerequisites / When-NOT-to-use conditions requiring sign-off on client engagements."
-    - "Kept as-is (positive finding): bundled scripts run only through the claude-seo launcher, never a bare interpreter; doctor --json deliberately omits absolute paths and environment values; setup runs only on explicit user request with no fallback to global package installation."
-  excised:
-    - "Promotional community footer: the base's closing section instructs the agent, after completing any major deliverable, to append a promotional block as the very last output — 'Built by agricidaniel — Join the AI Marketing Hub community' with free and pro skool.com links — across 16 deliverable types explicitly including full client audit reports (/seo audit, /seo technical, /seo content, ...), with a skip-list covering only small commands. Removed wholesale: heading, instruction, fenced block, and both show/skip lists. Nothing in this document instructs adding promotional content to any deliverable."
-    - "seo-flow CC BY 4.0 material: the upstream's FLOW-framework sub-skill (its /seo flow command row, its subagent entry, and its stage/prompt details) is CC BY 4.0-licensed inside an otherwise MIT repo. This derivative carries none of that material; a one-line pointer to the upstream repo remains. See license_notes."
-  grafts: []
-license_notes:
-  - "Doc-level license scan hit: the base body's sub-skill list describes seo-flow as a FLOW framework integration under CC BY 4.0 — a CC-BY component inside an otherwise-MIT document. This derivative carries none of the seo-flow material: the /seo flow command row, the seo-flow subagent entry, and all FLOW stage/prompt content are excluded; the body retains only a one-line pointer to the upstream repo. CC BY 4.0 obligations therefore do not attach to this document, which ships MIT."
-  - "references/maps-free-apis.md (vendored, MIT) notes that Overpass/OpenStreetMap DATA is ODbL with attribution required ('Data from OpenStreetMap'). That is a usage term on the third-party API's output data, not a license on any document text; noted so operators who publish OSM-derived data in deliverables carry the attribution."
+treatment: derivative
+derived_from:
+- id: AgriciDaniel/claude-seo/seo
+  role: base
+  license_at_derivation: MIT
+  content_hash_at_derivation: 5db52596dcc89608765afd9383e8ad81fb1e3768cb8c7c23275b2fe714efd421
+- id: AgriciDaniel/codex-seo/seo
+  role: sibling
+  license_at_derivation: NOASSERTION
+  content_hash_at_derivation: 186470fe99a1cc7ee43151be743117080865f44c3abebdf5cd8782fea3f52c0b
+- id: AgriciDaniel/claude-seo/seo-audit
+  role: sibling
+  license_at_derivation: MIT
+  content_hash_at_derivation: badb9495a725a07beed4957e8b1ec1732ecb48312002d64babb0ff710e278170
+- id: AgriciDaniel/codex-seo/seo-audit
+  role: sibling
+  license_at_derivation: NOASSERTION
+  content_hash_at_derivation: 7c5ed6805efbe63ff0e91588bffd46ef653836d04348151145e6780219e3839e
+targeted_version: 2.2.4
+last_verified_at: 2026-08-10
 ---
 
 # claude-seo — SEO toolchain front door

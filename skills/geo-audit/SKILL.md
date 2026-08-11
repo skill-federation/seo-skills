@@ -1,102 +1,19 @@
 ---
 name: geo-audit
-description: >-
-  A scored technical audit of whether a live domain is legible to AI-search
-  crawlers, current to 2026: one stdlib Python script, about 30 seconds, five
-  load-bearing checks (robots.txt bot access, pre-JS rendering, sitemap,
-  JSON-LD, internal links) with llms.txt reported as informational only. Reach
-  for it when a site needs a fast numeric verdict on AI-crawler visibility
-  before content spend; it refuses to emit numbers when the script cannot run
-  or the domain will not resolve.
-slug: geo-audit
-treatment: derivative
-source_minibatch: 940
-derived_from:
-  - id: vellum-ai/vellum-assistant/geo-audit
-    role: base
-    license_at_derivation: MIT
-    content_hash_at_derivation: 256824ad7cdd84f6623f3712aa9fb83e0484b0fe35ff74d4df75e82aaf01cb7e
-files:
-  - path: scripts/audit.py
-    sha256: 3d9f9ebd6038263898f0ab90c163f4d7f691c9be29e747d04174176ea46aa7cd
-    source_url: https://raw.githubusercontent.com/vellum-ai/vellum-assistant/HEAD/skills/geo-audit/scripts/audit.py
-    from_skill_id: vellum-ai/vellum-assistant/geo-audit
-    license: MIT
-    fetched_at: 2026-08-10
-targeted_version: "audit.py 1.0 (upstream HEAD, fetched 2026-08-10)"
-era_pins:
-  - "llms.txt is a proposed convention at roughly 0.015% adoption with no vendor confirmation"
-  - "Google retired FAQ rich results for every site on 2026-05-07"
-  - "HowTo has been deprecated since Sept 2023"
-last_verified_at: 2026-08-10
+description: 'A scored technical audit of whether a live domain is legible to AI-search crawlers, current
+  to 2026: one stdlib Python script, about 30 seconds, five load-bearing checks (robots.txt bot access,
+  pre-JS rendering, sitemap, JSON-LD, internal links) with llms.txt reported as informational only. Reach
+  for it when a site needs a fast numeric verdict on AI-crawler visibility before content spend; it refuses
+  to emit numbers when the script cannot run or the domain will not resolve.'
 license: MIT
-needles:
-  present:
-    - "llms.txt is a proposed convention at roughly 0.015% adoption with no vendor confirmation"
-    - "Google retired FAQ rich results for every site on 2026-05-07"
-    - "HowTo has been deprecated since Sept 2023"
-    - "If the script didn't run, there is no score"
-    - "do not invent a score"
-    - "first 50 internal"
-    - "<div onclick>"
-    - "nofollow ratio under 20%"
-    - "Homepage did not return 200 (0)"
-    - "whether blocking it affects AI Overviews inclusion is unverified"
-  absent:
-    - "cheap differentiator"
-    - "Stand up an llms.txt"
-    - "emerging convention"
-    - "invisible to Gemini and AI Overviews"
-dropped:
-  - needle: "Unblock CCBot in robots.txt (cheap win for training-set coverage)"
-    reason: >-
-      The base's sample-output code block ranks creating an llms.txt as fix #1
-      and folds its 15 points into the headline score — exactly the stale
-      weighting this derivative demotes to informational. Replaced with the
-      corrected sample in Step 3, which shows the raw script line plus the /85
-      load-bearing reading.
-findings:
-  defects_fixed:
-    - >-
-      llms.txt demoted from a 15/100 scored check and top-fix candidate to an
-      informational presence note: zero weight, never surfaced as a fix (no
-      major AI vendor has confirmed reading it; adoption ~0.015%). Presented
-      score becomes load-bearing /85 with the base's bands applied as ratios.
-    - >-
-      SSR check description corrected to the script's actual measurements
-      (pre-JS word count, H1, title, meta description, og:title) — the base
-      claimed brand-name and primary-CTA detection the code does not perform.
-    - >-
-      Schema check description corrected — the script checks WebSite type
-      presence only (SearchAction is never validated) and also accepts
-      FAQPage/ItemList as content schema.
-    - >-
-      Unreachable-domain refusal made operational — the script still prints a
-      ~18/100 scorecard for a dead domain (robots.txt partial credit), so the
-      "Homepage did not return 200 (0)" finding is named as the mandatory
-      no-score trigger.
-  security_findings:
-    - >-
-      Network egress surfaced: about a dozen GETs to the target plus up to
-      three llms.txt-linked URLs, under a user agent identifying the upstream
-      vendor (+https://vellum.ai).
-    - >-
-      Default run writes an HTML report to the system temp directory and
-      auto-opens a browser (open/xdg-open/os.startfile); use --no-html or
-      --no-open in CI and headless sessions.
-    - >-
-      The HTML report embeds a promotional handoff to the vendor's content
-      tool and a vendor footer — flagged for client-facing deliverables (run
-      --no-html).
-  excised:
-    - >-
-      The base's claim that llms.txt is an inexpensive differentiator worth 15
-      points.
-    - >-
-      The base's sample-output block ranking llms.txt creation as fix #1
-      (dropped with reason; replaced by the corrected Step 3 sample).
-  grafts: []
-license_notes: []
+treatment: derivative
+derived_from:
+- id: vellum-ai/vellum-assistant/geo-audit
+  role: base
+  license_at_derivation: MIT
+  content_hash_at_derivation: 256824ad7cdd84f6623f3712aa9fb83e0484b0fe35ff74d4df75e82aaf01cb7e
+targeted_version: audit.py 1.0 (upstream HEAD, fetched 2026-08-10)
+last_verified_at: 2026-08-10
 ---
 
 # GEO Audit — SkillFed domesticated edition

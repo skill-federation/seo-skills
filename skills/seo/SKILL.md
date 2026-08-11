@@ -1,107 +1,31 @@
 ---
 name: seo
-description: >-
-  Era-checked implementation reference and audit workflow for technical SEO and
-  answer-engine (AEO) visibility, current to 2026: copy-paste JSON-LD, robots,
-  canonical and hreflang blocks, vendored Lighthouse, PageSpeed and Search
-  Console scripts, plus a load-bearing llms.txt caution. Reach for it when
-  building or reviewing a site's markup, crawlability, or AI-citation posture;
-  it will not recommend retired rich-result types.
-slug: seo
-treatment: derivative
-source_minibatch: 940
-derived_from:
-  - id: addyosmani/web-quality-skills/seo
-    role: base
-    license_at_derivation: MIT
-    content_hash_at_derivation: f78092144a400aceafb8ba3a3a0757ea636df0ca6f99f7c67f47a8db94997d6b
-  - id: warpdotdev/oz-skills/seo-aeo-audit
-    role: graft
-    license_at_derivation: MIT
-    content_hash_at_derivation: 1601f009764ab61f66a2a68a2b154679f3500da657edd4543a4feb6397554bdd
-  - id: tech-leads-club/agent-skills/seo
-    role: sibling
-    license_at_derivation: NOASSERTION
-    content_hash_at_derivation: d52227fcbdcec94c549723f0248a843e7d99eba31685555f92efa83234cd79ac
-  - id: manojbajaj95/claude-gtm-plugin/seo-and-aeo-strategy
-    role: sibling
-    license_at_derivation: MIT
-    content_hash_at_derivation: 50e6dc790d305a52c0e35c1d5abbb73d302ba4ef6e8473b699da5520d48c3b90
-files:
-  - path: scripts/lighthouse.sh
-    sha256: 50458f60505c681339524af71fc0d9b5ff5cecfa31d3f36e8f4d73075bd0a808
-    source_url: https://raw.githubusercontent.com/warpdotdev/oz-skills/HEAD/.agents/skills/seo-aeo-audit/scripts/lighthouse.sh
-    from_skill_id: warpdotdev/oz-skills/seo-aeo-audit
-    license: MIT
-    fetched_at: 2026-08-10
-  - path: scripts/pagespeed.sh
-    sha256: 66b1889dba915641c5b607956359014c2ca9fedf89b9ae6e81e181a88ad9fff2
-    source_url: https://raw.githubusercontent.com/warpdotdev/oz-skills/HEAD/.agents/skills/seo-aeo-audit/scripts/pagespeed.sh
-    from_skill_id: warpdotdev/oz-skills/seo-aeo-audit
-    license: MIT
-    fetched_at: 2026-08-10
-  - path: scripts/search-console-export.mjs
-    sha256: f40f94f6fe7383c78fdf49c3ca7076f4a3a275a21097b81543eec0d017fc4a80
-    source_url: https://raw.githubusercontent.com/warpdotdev/oz-skills/HEAD/.agents/skills/seo-aeo-audit/scripts/search-console-export.mjs
-    from_skill_id: warpdotdev/oz-skills/seo-aeo-audit
-    license: MIT
-    fetched_at: 2026-08-10
-  - path: references/json-ld-templates.md
-    sha256: cf4e5e63156119a5a47db62209f554802bf427cf8027dbb43e8b032ddcfe3a5c
-    source_url: https://raw.githubusercontent.com/warpdotdev/oz-skills/HEAD/.agents/skills/seo-aeo-audit/references/json-ld-templates.md
-    from_skill_id: warpdotdev/oz-skills/seo-aeo-audit
-    license: MIT
-    fetched_at: 2026-08-10
-targeted_version: "Google Search / answer-engine guidance as of 2026-08"
-era_pins:
-  - "Google retired FAQ rich results for every site on 2026-05-07"
-  - "HowTo rich results have been deprecated since September 2023"
-  - "As of mid-2026, `llms.txt` remains a proposed convention at roughly 0.015% adoption with no vendor confirmation"
-last_verified_at: 2026-08-10
+description: 'Era-checked implementation reference and audit workflow for technical SEO and answer-engine
+  (AEO) visibility, current to 2026: copy-paste JSON-LD, robots, canonical and hreflang blocks, vendored
+  Lighthouse, PageSpeed and Search Console scripts, plus a load-bearing llms.txt caution. Reach for it
+  when building or reviewing a site''s markup, crawlability, or AI-citation posture; it will not recommend
+  retired rich-result types.'
 license: MIT
-needles:
-  present:
-    - "Google retired FAQ rich results for every site on 2026-05-07"
-    - "HowTo rich results have been deprecated since September 2023"
-    - "As of mid-2026, `llms.txt` remains a proposed convention at roughly 0.015% adoption with no vendor confirmation"
-    - "no major AI vendor has confirmed they read it"
-    - "Treat it as a 5-minute speculative add for content sites"
-    - "Decide per-bot rather than blanket-blocking"
-    - "belong to the bundle's strategy layer (ai-seo)"
-    - "Bing-only since 2019"
-  absent:
-    - "highest AI citation rate"
-    - "25% drop in traditional search volume"
-    - "test top commercial queries monthly"
-dropped:
-  - needle: 'Or use rel="prev" / rel="next" for explicit pagination'
-    reason: >-
-      Excuses the base's canonical-URLs fenced block, carried with one dated
-      clause added to this comment - "(Bing-only since 2019)" - per bundle
-      review finding 11: Google has ignored rel=prev/next since 2019 while
-      Bing still reads them (the fact a sibling member pins), and the undated
-      comment read as a live general lever. No other line of the block is
-      changed.
-findings:
-  defects_fixed:
-    - "Graft reimport guard: the fork dropped the base's llms.txt caution while adding scope; this derivative keeps the caution and every grafted AEO paragraph was checked against it - no grafted text assigns llms.txt any weight."
-    - "Dead relative links to sibling skills (../core-web-vitals/SKILL.md, ../web-quality-audit/SKILL.md) removed; they cannot resolve in this package."
-    - "Vendored scripts' internal usage messages print scripts/seo/<name> paths; the shipped location is scripts/<name>. All invocations in this document use the real paths."
-  security_findings:
-    - "scripts/pagespeed.sh sends the target URL and PAGESPEED_API_KEY (as a query parameter) to www.googleapis.com - keep the key in an env var, never inline it in shared shell history."
-    - "scripts/search-console-export.mjs sends a GSC_ACCESS_TOKEN bearer token to searchconsole.googleapis.com - scope it webmasters.readonly; exported query data is business-sensitive."
-    - "scripts/lighthouse.sh drives a local Lighthouse (headless Chrome) fetch of the target URL - run it only against sites you are authorized to audit."
-  excised:
-    - "Fork's unsourced superlative about FAQPage AI-citation rates - misleading after 2026-05-07."
-    - "Fork's unsourced market-shift statistics (a search-volume decline prediction stale as phrased, weekly-user and zero-click figures)."
-    - "Fork's illustrative AEO example blocks (SEO-vs-AEO comparison, answer-first, entity-focused, per-platform passages) and its five-part checklist - condensed to dense prose for the size envelope; the guidance survives."
-    - "Bundle review finding 9 (role trespass): the AEO half's per-platform preference profiles and monthly query-testing cadence - the strategy layer's (ai-seo) declared monitoring job; the GA4 source-name configuration sentence is kept, with a pointer."
-  grafts:
-    - "Audit workflow <- warpdotdev/oz-skills/seo-aeo-audit, section 'Audit workflow'"
-    - "Scripts harness + scripts/lighthouse.sh, scripts/pagespeed.sh, scripts/search-console-export.mjs <- warpdotdev/oz-skills/seo-aeo-audit, section 'Scripts (optional)'"
-    - "AEO / answer-engine half (condensed) + references/json-ld-templates.md <- warpdotdev/oz-skills/seo-aeo-audit, section 'AEO / AI Visibility Optimization'"
-license_notes:
-  - "Both inputs declare license: MIT in their SKILL.md frontmatter, matching their repository licenses - restatements, no doc-level conflict."
+treatment: derivative
+derived_from:
+- id: addyosmani/web-quality-skills/seo
+  role: base
+  license_at_derivation: MIT
+  content_hash_at_derivation: f78092144a400aceafb8ba3a3a0757ea636df0ca6f99f7c67f47a8db94997d6b
+- id: warpdotdev/oz-skills/seo-aeo-audit
+  role: graft
+  license_at_derivation: MIT
+  content_hash_at_derivation: 1601f009764ab61f66a2a68a2b154679f3500da657edd4543a4feb6397554bdd
+- id: tech-leads-club/agent-skills/seo
+  role: sibling
+  license_at_derivation: NOASSERTION
+  content_hash_at_derivation: d52227fcbdcec94c549723f0248a843e7d99eba31685555f92efa83234cd79ac
+- id: manojbajaj95/claude-gtm-plugin/seo-and-aeo-strategy
+  role: sibling
+  license_at_derivation: MIT
+  content_hash_at_derivation: 50e6dc790d305a52c0e35c1d5abbb73d302ba4ef6e8473b699da5520d48c3b90
+targeted_version: Google Search / answer-engine guidance as of 2026-08
+last_verified_at: 2026-08-10
 ---
 
 # SEO implementation reference and audit workflow

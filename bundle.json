@@ -1,8 +1,63 @@
 {
   "name": "seo-skills",
-  "bundle_version": "3d5634ce2d5f812b",
+  "bundle_version": "b4c9fef88f69324f",
   "generated_from": "skillfed domesticated-skills collection",
   "members": [
+    {
+      "slug": "keyword-strategy",
+      "skill_md": "skills/keyword-strategy/SKILL.md",
+      "sha256": "06de51e3115ae207f0003d216af53a15a55c37bbc89c2774b492b1074721e30d",
+      "published_sha256": "2718720c4eea933d8d77906c4280a5eeed906deba184fe876f78c7286735e90f",
+      "license": "MIT",
+      "description": "Plan which search terms a site should target in 2026: discover candidate queries, label them by search intent, cluster them, screen for winnability, and rank the survivors into a prioritized topical map. The standalone strategy layer — no paid API, and it calls none. Use it to choose targets, size winnable long-tail, or turn a raw export into a plan. It plans targeting only; it audits no live page. For the content plan that consumes the map, see content-strategy.",
+      "targeted_version": null,
+      "last_verified_at": "2026-08-10",
+      "treatment": "derivative",
+      "derived_from": [
+        {
+          "id": "kostja94/marketing-skills/keyword-research",
+          "role": "base",
+          "license_at_derivation": "MIT",
+          "content_hash_at_derivation": "dd186633748cacbd90076bf717102752aa5adf5ae2f3b80a0b8bb0e109dc0933"
+        }
+      ],
+      "synthesized_from": [],
+      "era_pins": [
+        "As of 2026, Google Keyword Planner reports search volume as bucketed ranges, not exact monthly counts",
+        "In 2026, zero-click SERPs and AI Overviews absorb a growing share of head-term clicks"
+      ],
+      "files": []
+    },
+    {
+      "slug": "content-strategy",
+      "skill_md": "skills/content-strategy/SKILL.md",
+      "sha256": "4d27a16500aa5b6ef350908e331444a74bb097e34dd6d8d33da7c2f71d56d3b3",
+      "published_sha256": "cc9bbc262f599b84e6054a0e18cd1745d5de52365e237ba005a0f9592cc3d141",
+      "license": "MIT",
+      "description": "Plans an SEO content program in 2026: chooses which topics to own, sorts them into pillars and topic clusters, tags each piece searchable-vs-shareable and by buyer stage, then scores them into a prioritized publishing plan. Reach for it when someone asks which pieces to produce, how to group blog topics, or how to build an editorial roadmap. It decides what to create, not how to write the copy.",
+      "targeted_version": null,
+      "last_verified_at": "2026-08-10",
+      "treatment": "derivative",
+      "derived_from": [
+        {
+          "id": "coreyhaines31/marketingskills/content-strategy",
+          "role": "base",
+          "license_at_derivation": "MIT",
+          "content_hash_at_derivation": "0704077c4b0f8ca0c98bc64bb6618a7c7c22c0d25e4f0667d676c4f93261bcde"
+        }
+      ],
+      "synthesized_from": [],
+      "era_pins": [
+        "topic-cluster coverage over one thin page per keyword",
+        "optimizing for AI and LLM discovery is a first-class 2026 content goal"
+      ],
+      "files": [
+        {
+          "path": "references/headless-cms.md",
+          "sha256": "970030df3cf0a377bc5b7d25a826a11da1a669805e5ba863793a40f9f15f243d"
+        }
+      ]
+    },
     {
       "slug": "seo-plan",
       "skill_md": "skills/seo-plan/SKILL.md",
@@ -162,6 +217,95 @@
       "files": []
     },
     {
+      "slug": "entity-seo",
+      "skill_md": "skills/entity-seo/SKILL.md",
+      "sha256": "ce44b3d38c43b1cdff634a8f9f28fafc4bf8f8b1f787f2a6bcae5171efecb64d",
+      "published_sha256": "d1b07117f1f0152696b63f98675594b5c139aecc0ffe104817c8f25775e256d1",
+      "license": "MIT",
+      "description": "Entity and topical-authority strategy for SEO, current to 2026: make a brand, its products, and its authors read as distinct, recognizable entities in search engines' knowledge systems. Plan stable-@id Organization and Person identity, cross-touchpoint name/logo/description consistency, and the sameAs and Wikidata signals that strengthen how AI search identifies and cites a brand. Use it to decide entity strategy — not to write JSON-LD (that is the seo reference) or audit a live site.",
+      "targeted_version": "Google entity / Knowledge Graph understanding as of 2026-08",
+      "last_verified_at": "2026-08-10",
+      "treatment": "derivative",
+      "derived_from": [
+        {
+          "id": "kostja94/marketing-skills/entity-seo",
+          "role": "base",
+          "license_at_derivation": "MIT",
+          "content_hash_at_derivation": "fa876839edc17a98255b1c2243079189abef7e1f1905635f56acc4095f2f685f"
+        }
+      ],
+      "synthesized_from": [],
+      "era_pins": [
+        "Hummingbird (2013)",
+        "RankBrain (2015)",
+        "BERT (2019)",
+        "MUM (2021)",
+        "As of 2026, AI-search surfaces reward clearly-identified entities"
+      ],
+      "files": []
+    },
+    {
+      "slug": "programmatic-seo",
+      "skill_md": "skills/programmatic-seo/SKILL.md",
+      "sha256": "11a5bcd1d1e80d1e37ebe39e3ba7dd34c95ae5a4830f032d88f2251cfff35196",
+      "published_sha256": "b937020a9ff92ee203ec88cacc2e240d1c5ffee200b03f5e2f0cd4cc37e885bb",
+      "license": "MIT",
+      "description": "Build SEO pages at scale from a template plus a dataset without earning a thin-content penalty. Choose one of twelve page playbooks, anchor each page to a defensible data source and a real unique-value rule, pick a subfolder URL pattern, and set indexation so a large templated set survives Google's 2026 scaled-content and doorway-page enforcement. Use when asked to generate many keyword- or location-variant pages (pSEO, directory, comparison, or geo pages) that must genuinely rank.",
+      "targeted_version": "Google Search spam policies, 2026",
+      "last_verified_at": "2026-08-10",
+      "treatment": "derivative",
+      "derived_from": [
+        {
+          "id": "coreyhaines31/marketingskills/programmatic-seo",
+          "role": "base",
+          "license_at_derivation": "MIT",
+          "content_hash_at_derivation": "468af78790daac653dde669968a58773ad06754d25bc31de9b2272632bf58d3a"
+        }
+      ],
+      "synthesized_from": [],
+      "era_pins": [
+        "As of 2026, mass-produced template pages that add no per-page value fall under Google's scaled content abuse spam policy",
+        "near-duplicate location pages are treated as doorway pages and demoted"
+      ],
+      "files": [
+        {
+          "path": "references/playbooks.md",
+          "sha256": "60d0cef4633089ef8a2f459c530702ad5844bef67d86d8355096398be66939a7"
+        }
+      ]
+    },
+    {
+      "slug": "geo-audit",
+      "skill_md": "skills/geo-audit/SKILL.md",
+      "sha256": "c139a4456503b182c0c0834ff202a4f39f9f5e8612fa8283c214fd670debefe9",
+      "published_sha256": "9fe0866583e938898c9f35c263f85f5171fb422a51e48f7bc79637286145111e",
+      "license": "MIT",
+      "description": "A scored technical audit of whether a live domain is legible to AI-search crawlers, current to 2026: one stdlib Python script, about 30 seconds, five load-bearing checks (robots.txt bot access, pre-JS rendering, sitemap, JSON-LD, internal links) with llms.txt reported as informational only. Reach for it when a site needs a fast numeric verdict on AI-crawler visibility before content spend; it refuses to emit numbers when the script cannot run or the domain will not resolve.",
+      "targeted_version": "audit.py 1.0 (upstream HEAD, fetched 2026-08-10)",
+      "last_verified_at": "2026-08-10",
+      "treatment": "derivative",
+      "derived_from": [
+        {
+          "id": "vellum-ai/vellum-assistant/geo-audit",
+          "role": "base",
+          "license_at_derivation": "MIT",
+          "content_hash_at_derivation": "256824ad7cdd84f6623f3712aa9fb83e0484b0fe35ff74d4df75e82aaf01cb7e"
+        }
+      ],
+      "synthesized_from": [],
+      "era_pins": [
+        "llms.txt is a proposed convention at roughly 0.015% adoption with no vendor confirmation",
+        "Google retired FAQ rich results for every site on 2026-05-07",
+        "HowTo has been deprecated since Sept 2023"
+      ],
+      "files": [
+        {
+          "path": "scripts/audit.py",
+          "sha256": "3d9f9ebd6038263898f0ab90c163f4d7f691c9be29e747d04174176ea46aa7cd"
+        }
+      ]
+    },
+    {
       "slug": "geo-technical",
       "skill_md": "skills/geo-technical/SKILL.md",
       "sha256": "593c7843b77896a475690c2a7a35681b3e60b4562bdcaf74e2756034eb5b9d8f",
@@ -189,60 +333,6 @@
         "INP replaced FID in March 2024"
       ],
       "files": []
-    },
-    {
-      "slug": "ai-seo",
-      "skill_md": "skills/ai-seo/SKILL.md",
-      "sha256": "c565f29a36f2417b6a8cad8238bba464a386a931cf7efca9e58a3e9a184cd847",
-      "published_sha256": "a274c4245cbd26ed2b660380202a10be24da33185ffaefd9d8fdb35e1becc720",
-      "license": "MIT",
-      "description": "The GEO/AEO strategy layer for agents, current to Google's 2026 guidance split: answer features ride core ranking while ChatGPT, Claude, and Perplexity reward extractable structure. Load it when planning how a site earns AI citations, before any page edits. It interviews, adjudicates tactics per engine, and emits an evidence-tagged plan; it executes nothing, so pair it with an audit skill that actually fetches the site.",
-      "targeted_version": "2.2.0",
-      "last_verified_at": "2026-08-10",
-      "treatment": "derivative",
-      "derived_from": [
-        {
-          "id": "coreyhaines31/marketingskills/ai-seo",
-          "role": "base",
-          "license_at_derivation": "MIT",
-          "content_hash_at_derivation": "cb70d0b5daf4cfe3cad30ca897007347bb3dc150c9384497334dbd9122c0143c"
-        },
-        {
-          "id": "b1rdmania/ghostclaw/ai-seo",
-          "role": "superseded",
-          "license_at_derivation": "MIT",
-          "content_hash_at_derivation": "7ef9eac488baafde07c816f6c24c1b250995bef730882cc05e4dfe32978d93eb"
-        }
-      ],
-      "synthesized_from": [],
-      "era_pins": [
-        "targets the 2.2.0 line of coreyhaines31/marketingskills/ai-seo; the same-name fork b1rdmania/ghostclaw/ai-seo is frozen at 1.1.0 and is missing the Google-stance section and the query fan-out material",
-        "Google's generative AI features on Search are rooted in its core Search ranking and quality systems — nothing has to be added to a page for them",
-        "producing an AI-targeted variant of your content falls under Google's scaled-content spam policy",
-        "the Princeton GEO study (KDD 2024) ranks citing sources at the top of its nine-method list at roughly +40% visibility, while keyword stuffing at the bottom actively costs roughly 10%"
-      ],
-      "files": [
-        {
-          "path": "references/citations-vs-recommendations.md",
-          "sha256": "88016418b43b7e798dd950eb1240f76dec08c3408038f9a5d83005aff5a4daa3"
-        },
-        {
-          "path": "references/content-patterns.md",
-          "sha256": "8adcfcc020a3529eda71f783e4893d3e39e8b0f503fd2fa126e8b75a80963824"
-        },
-        {
-          "path": "references/content-types.md",
-          "sha256": "9ad0a871f866efa307fc0d6fe2bd19d443a2276cb396afdd5b4d81fe9b4167e3"
-        },
-        {
-          "path": "references/okf.md",
-          "sha256": "4abcab5b8ee90b63c5d09c98387a8ec3cdb8f5df33e75d3b4b91eb817283bfd8"
-        },
-        {
-          "path": "references/platform-ranking-factors.md",
-          "sha256": "ca3fb8c09fec3445abe611bab2cd1b5f20751c5d51a3a5c63ecd2b85cd458ee8"
-        }
-      ]
     },
     {
       "slug": "seo-validate",
@@ -315,33 +405,56 @@
       "files": []
     },
     {
-      "slug": "geo-audit",
-      "skill_md": "skills/geo-audit/SKILL.md",
-      "sha256": "c139a4456503b182c0c0834ff202a4f39f9f5e8612fa8283c214fd670debefe9",
-      "published_sha256": "9fe0866583e938898c9f35c263f85f5171fb422a51e48f7bc79637286145111e",
+      "slug": "ai-seo",
+      "skill_md": "skills/ai-seo/SKILL.md",
+      "sha256": "6e75ae9235c022c4cdd771a08f398de57bd374a228f6ad518ac0581f5e9c8e01",
+      "published_sha256": "719ea16d1d3018a685e15ed4625656c581c94725a64d24ddf8bad80e0c05bfde",
       "license": "MIT",
-      "description": "A scored technical audit of whether a live domain is legible to AI-search crawlers, current to 2026: one stdlib Python script, about 30 seconds, five load-bearing checks (robots.txt bot access, pre-JS rendering, sitemap, JSON-LD, internal links) with llms.txt reported as informational only. Reach for it when a site needs a fast numeric verdict on AI-crawler visibility before content spend; it refuses to emit numbers when the script cannot run or the domain will not resolve.",
-      "targeted_version": "audit.py 1.0 (upstream HEAD, fetched 2026-08-10)",
+      "description": "The GEO/AEO strategy layer for agents, current to Google's 2026 guidance split: answer features ride core ranking while ChatGPT, Claude, and Perplexity reward extractable structure. Load it when planning how a site earns AI citations, before any page edits. It interviews, adjudicates tactics per engine, and emits an evidence-tagged plan; it executes nothing, so pair it with an audit skill that actually fetches the site.",
+      "targeted_version": "2.2.0",
       "last_verified_at": "2026-08-10",
       "treatment": "derivative",
       "derived_from": [
         {
-          "id": "vellum-ai/vellum-assistant/geo-audit",
+          "id": "coreyhaines31/marketingskills/ai-seo",
           "role": "base",
           "license_at_derivation": "MIT",
-          "content_hash_at_derivation": "256824ad7cdd84f6623f3712aa9fb83e0484b0fe35ff74d4df75e82aaf01cb7e"
+          "content_hash_at_derivation": "cb70d0b5daf4cfe3cad30ca897007347bb3dc150c9384497334dbd9122c0143c"
+        },
+        {
+          "id": "b1rdmania/ghostclaw/ai-seo",
+          "role": "superseded",
+          "license_at_derivation": "MIT",
+          "content_hash_at_derivation": "7ef9eac488baafde07c816f6c24c1b250995bef730882cc05e4dfe32978d93eb"
         }
       ],
       "synthesized_from": [],
       "era_pins": [
-        "llms.txt is a proposed convention at roughly 0.015% adoption with no vendor confirmation",
-        "Google retired FAQ rich results for every site on 2026-05-07",
-        "HowTo has been deprecated since Sept 2023"
+        "targets the 2.2.0 line of coreyhaines31/marketingskills/ai-seo; the same-name fork b1rdmania/ghostclaw/ai-seo is frozen at 1.1.0 and is missing the Google-stance section and the query fan-out material",
+        "Google's generative AI features on Search are rooted in its core Search ranking and quality systems — nothing has to be added to a page for them",
+        "producing an AI-targeted variant of your content falls under Google's scaled-content spam policy",
+        "the Princeton GEO study (KDD 2024) ranks citing sources at the top of its nine-method list at roughly +40% visibility, while keyword stuffing at the bottom actively costs roughly 10%"
       ],
       "files": [
         {
-          "path": "scripts/audit.py",
-          "sha256": "3d9f9ebd6038263898f0ab90c163f4d7f691c9be29e747d04174176ea46aa7cd"
+          "path": "references/citations-vs-recommendations.md",
+          "sha256": "88016418b43b7e798dd950eb1240f76dec08c3408038f9a5d83005aff5a4daa3"
+        },
+        {
+          "path": "references/content-patterns.md",
+          "sha256": "8adcfcc020a3529eda71f783e4893d3e39e8b0f503fd2fa126e8b75a80963824"
+        },
+        {
+          "path": "references/content-types.md",
+          "sha256": "9ad0a871f866efa307fc0d6fe2bd19d443a2276cb396afdd5b4d81fe9b4167e3"
+        },
+        {
+          "path": "references/okf.md",
+          "sha256": "4abcab5b8ee90b63c5d09c98387a8ec3cdb8f5df33e75d3b4b91eb817283bfd8"
+        },
+        {
+          "path": "references/platform-ranking-factors.md",
+          "sha256": "ca3fb8c09fec3445abe611bab2cd1b5f20751c5d51a3a5c63ecd2b85cd458ee8"
         }
       ]
     },

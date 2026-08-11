@@ -605,14 +605,13 @@ Wire these through whatever integrations your agent framework provides (the base
 
 ## Related Skills
 
-These names are the upstream marketingskills suite's identifiers — they are pairings by role, not links that resolve here:
+Some of these now ship as members of this bundle; the rest are the upstream marketingskills suite's identifiers — role pairings, not links that resolve here:
 
-- **seo-audit**: For traditional technical and on-page SEO audits — the upstream name for the *executing* counterpart Conditions requires before any live-site claim; in this bundle that role resolves to geo-technical, geo-audit, or claude-seo (see When NOT to use)
-- **schema**: For implementing structured data that helps AI understand your content
-- **content-strategy**: For planning what content to create
-- **competitors**: For building comparison pages that get cited
-- **programmatic-seo**: For building SEO pages at scale
-- **copywriting**: For writing content that's both human-readable and AI-extractable
+- **content-strategy**: a bundle member — planning what content to create.
+- **programmatic-seo**: a bundle member — building SEO pages at scale without thin-content penalties.
+- **schema**: for implementing structured data that helps AI understand your content — in this bundle that role resolves to the `seo` implementation reference.
+- **seo-audit**: the upstream name for the *executing* counterpart Conditions requires before any live-site claim; in this bundle that role resolves to geo-technical, geo-audit, or claude-seo (see When NOT to use).
+- **competitors**, **copywriting**: upstream-only — comparison-page and copy-production roles this bundle deliberately does not ship.
 
 ## Attribution
 

@@ -1,5 +1,30 @@
 # Changelog
 
+## v4 — 2026-08-11
+
+Scope-expansion release — four new skills widen the bundle from planning/building/auditing
+into the upstream **strategy** layer; the bundle is now 13 skills, version `b4c9fef88f69324f`.
+
+- **keyword-strategy** (new) — keyword targeting method: discovery, search-intent, clustering,
+  and prioritization into a topical map. The standalone method (usable with just autocomplete and
+  a browser); the tool-driven version rides claude-seo.
+- **content-strategy** (new) — SEO content planning: pillars, topic clusters, content types, and
+  a prioritized editorial plan. Plans the program; it does not write the copy.
+- **entity-seo** (new) — the entity / topical-authority layer: entity signals, Organization/Person
+  identity, and the Knowledge Graph reality.
+- **programmatic-seo** (new) — building SEO pages at scale from templates and data: the 12
+  playbooks, unique-value-per-page, and how to avoid thin-content and doorway-page penalties.
+- **ai-seo** (refreshed) — its "Related Skills" note now correctly points at content-strategy and
+  programmatic-seo as real bundle members (they were admitted this release).
+
+Scope change: content strategy and keyword strategy move from "deliberately not covered" to
+covered. Content *production* (writing the finished copy) and the raw keyword/backlink/rank
+*tools* remain out — the latter drive on the user's own toolchain behind claude-seo.
+
+Two of the new skills ship a **corrected reference file** (content-strategy's `headless-cms.md`,
+programmatic-seo's `playbooks.md`): dangling non-bundle links and an internal inconsistency were
+edited out, and each records the upstream original's hash so the change is auditable.
+
 ## v3 — 2026-08-11
 
 Content release — two authored build-time planning skills added; the bundle is now 9 skills,

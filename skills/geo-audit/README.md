@@ -44,6 +44,6 @@ Every dated fact this document depends on is pinned in [SKILL.md](SKILL.md)'s Er
 
 - **Derived from**: [vellum-ai/vellum-assistant/geo-audit](https://github.com/vellum-ai/vellum-assistant) (MIT)
 - **License**: MIT (this directory's LICENSE)
-- **What domestication changed**: 9 defect(s) fixed, 6 excision(s) — full record with reasons in [SKILL.md](SKILL.md)'s Findings and Attribution sections.
+- **What domestication changed**: 4 defect(s) fixed, 2 excision(s) — full record with reasons in [SKILL.md](SKILL.md)'s Findings and Attribution sections.
 
 Part of the [seo-skills bundle](../../README.md) · curated by [skillfed.io](https://skillfed.io)

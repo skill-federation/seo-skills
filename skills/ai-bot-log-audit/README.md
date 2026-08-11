@@ -49,6 +49,6 @@ Every dated fact this document depends on is pinned in [SKILL.md](SKILL.md)'s Er
 
 - **Derived from**: [guia-matthieu/clawfu-skills/ai-bot-log-audit](https://github.com/guia-matthieu/clawfu-skills) (MIT)
 - **License**: MIT (this directory's LICENSE)
-- **What domestication changed**: 9 defect(s) fixed, 6 excision(s) — full record with reasons in [SKILL.md](SKILL.md)'s Findings and Attribution sections.
+- **What domestication changed**: 1 defect(s) fixed, 3 excision(s) — full record with reasons in [SKILL.md](SKILL.md)'s Findings and Attribution sections.
 
 Part of the [seo-skills bundle](../../README.md) · curated by [skillfed.io](https://skillfed.io)

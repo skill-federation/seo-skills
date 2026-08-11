@@ -46,6 +46,6 @@ Every dated fact this document depends on is pinned in [SKILL.md](SKILL.md)'s Er
 - **Derived from**: [coreyhaines31/marketingskills/ai-seo](https://github.com/coreyhaines31/marketingskills) (MIT)
 - **Superseded** (zero text taken): b1rdmania/ghostclaw/ai-seo
 - **License**: MIT (this directory's LICENSE)
-- **What domestication changed**: 9 defect(s) fixed, 6 excision(s) — full record with reasons in [SKILL.md](SKILL.md)'s Findings and Attribution sections.
+- **What domestication changed**: 3 defect(s) fixed, 3 excision(s) — full record with reasons in [SKILL.md](SKILL.md)'s Findings and Attribution sections.
 
 Part of the [seo-skills bundle](../../README.md) · curated by [skillfed.io](https://skillfed.io)

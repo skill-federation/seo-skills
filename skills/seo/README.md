@@ -43,6 +43,6 @@ Every dated fact this document depends on is pinned in [SKILL.md](SKILL.md)'s Er
 - **Sibling** (zero text taken): tech-leads-club/agent-skills/seo
 - **Sibling** (zero text taken): manojbajaj95/claude-gtm-plugin/seo-and-aeo-strategy
 - **License**: MIT (this directory's LICENSE)
-- **What domestication changed**: 9 defect(s) fixed, 6 excision(s) — full record with reasons in [SKILL.md](SKILL.md)'s Findings and Attribution sections.
+- **What domestication changed**: 3 defect(s) fixed, 4 excision(s) — full record with reasons in [SKILL.md](SKILL.md)'s Findings and Attribution sections.
 
 Part of the [seo-skills bundle](../../README.md) · curated by [skillfed.io](https://skillfed.io)

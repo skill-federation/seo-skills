@@ -2,10 +2,10 @@
 
 > Repo-reading pre-ship SEO audit for source code: detects the framework first, then applies framework-conditioned rules with severity and definitive-vs-heuristic confidence labels; strictly read-only. Reach for it when the pages to check live in a codebase rather than behind a live URL. Era-adjudicated 2026: retired FAQ/HowTo rich-result guidance excised, GEO checks demoted to hypothesis.
 
-**Install**
+**Install** (the [`skills`](https://www.npmjs.com/package/skills) CLI reads this repo's layout directly from GitHub)
 
 ```bash
-npx skillfed install skill-federation/seo-skills/seo-validate
+npx skills add skill-federation/seo-skills --skill seo-validate
 ```
 
 ## Conditions

@@ -2,10 +2,10 @@
 
 > Era-checked implementation reference and audit workflow for technical SEO and answer-engine (AEO) visibility, current to 2026: copy-paste JSON-LD, robots, canonical and hreflang blocks, vendored Lighthouse, PageSpeed and Search Console scripts, plus a load-bearing llms.txt caution. Reach for it when building or reviewing a site's markup, crawlability, or AI-citation posture; it will not recommend retired rich-result types.
 
-**Install**
+**Install** (the [`skills`](https://www.npmjs.com/package/skills) CLI reads this repo's layout directly from GitHub)
 
 ```bash
-npx skillfed install skill-federation/seo-skills/seo
+npx skills add skill-federation/seo-skills --skill seo
 ```
 
 ## Conditions

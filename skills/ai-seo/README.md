@@ -2,10 +2,10 @@
 
 > The GEO/AEO strategy layer for agents, current to Google's 2026 guidance split: answer features ride core ranking while ChatGPT, Claude, and Perplexity reward extractable structure. Load it when planning how a site earns AI citations, before any page edits. It interviews, adjudicates tactics per engine, and emits an evidence-tagged plan; it executes nothing, so pair it with an audit skill that actually fetches the site.
 
-**Install**
+**Install** (the [`skills`](https://www.npmjs.com/package/skills) CLI reads this repo's layout directly from GitHub)
 
 ```bash
-npx skillfed install skill-federation/seo-skills/ai-seo
+npx skills add skill-federation/seo-skills --skill ai-seo
 ```
 
 ## Conditions

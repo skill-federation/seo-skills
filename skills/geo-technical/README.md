@@ -2,10 +2,10 @@
 
 > Score a live site's readiness to be read by machines: fetch raw HTML, hold it against the browser render, and grade eight infrastructure categories out of 100 before any content or GEO work starts. Use when pages rank nowhere, AI assistants never cite the site, or a JavaScript framework may be hiding the copy from crawlers. Era-stamped for 2026 — retired rich-result types and unproven conventions stay out of the score.
 
-**Install**
+**Install** (the [`skills`](https://www.npmjs.com/package/skills) CLI reads this repo's layout directly from GitHub)
 
 ```bash
-npx skillfed install skill-federation/seo-skills/geo-technical
+npx skills add skill-federation/seo-skills --skill geo-technical
 ```
 
 ## Conditions

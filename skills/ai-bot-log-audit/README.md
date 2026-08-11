@@ -2,10 +2,10 @@
 
 > Method for reading Apache and Nginx access-log evidence to establish what GPTBot, ClaudeBot, PerplexityBot and peers actually fetch, skip, or error on, and which fixes each fetch pattern calls for. Reach for it when a citation-gap theory needs log rows behind it and you can export the raw logs. Domesticated 2026-08; the bot roster is carried from the wild source's 2026 table, not independently re-checked.
 
-**Install**
+**Install** (the [`skills`](https://www.npmjs.com/package/skills) CLI reads this repo's layout directly from GitHub)
 
 ```bash
-npx skillfed install skill-federation/seo-skills/ai-bot-log-audit
+npx skills add skill-federation/seo-skills --skill ai-bot-log-audit
 ```
 
 ## Conditions
